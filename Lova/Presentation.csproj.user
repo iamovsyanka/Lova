@@ -36,6 +36,9 @@
     <Page Update="Views\Registration.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\Resource\Style\Forum.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\Resource\Style\StartWindow.xaml">
       <SubType>Designer</SubType>
     </Page>

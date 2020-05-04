@@ -11,43 +11,71 @@
     <Page.DataContext>
         <vm:ForumViewModel/>
     </Page.DataContext>
+
+    <Page.Resources>
+        <ResourceDictionary Source="Resource\Style\Forum.xaml"/>
+    </Page.Resources>
+
     <Grid>
-        <ListView ItemsSource="{Binding Discussions}" >
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <Border BorderBrush="#FF2336C7" BorderThickness="1" Background="#FF74CFE0" Width="651">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="551*"/>
+            <ColumnDefinition Width="249*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="57*"/>
+            <RowDefinition Height="127*"/>
+            <RowDefinition Height="177*"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Форум" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
+        <Grid Grid.Row="1" Grid.RowSpan="4" Grid.Column="0">
+            <ListView  ItemsSource="{Binding Discussions}" SelectedItem="{Binding SelectedDiscussion}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
                         <StackPanel>
-                            <TextBlock Text="{Binding DiscussionName}" FontWeight="Bold"/>
-                            <TextBlock Text="{Binding Text}"/>
-                            
-                            <ListView ItemsSource="{Binding Messages}">
-                                <ListView.ItemTemplate>
-                                    <DataTemplate>
-                                        <Border BorderBrush="#FF2336C7" >
-                                            <StackPanel>
-                                                <StackPanel Orientation="Horizontal">
-                                                    <TextBlock Text="{Binding UserName}" FontWeight="Bold"/>
-                                                    <TextBlock Text=" ("/>
-                                                    <TextBlock Text="{Binding When}"/>
-                                                    <TextBlock Text="):"/>
-                                                </StackPanel>
-                                                <StackPanel>
-                                                    <TextBlock Text="{Binding Text}"/>
-                                                </StackPanel>
-
-                                            </StackPanel>
-                                        </Border>
-                                    </DataTemplate>
-                                </ListView.ItemTemplate>
-
-                            </ListView>
-                            <Button Command="{Binding S}" Content="Отправить" Width="180"/>
+                            <Border BorderBrush="#8570E0" BorderThickness="1" Width="505">
+                                <StackPanel>
+                                    <TextBlock Text="{Binding DiscussionName}" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" />
+                                    <TextBlock Text="{Binding Text}" FontSize="14" TextWrapping="Wrap"/>
+                                    <StackPanel>
+                                        <ListView ItemsSource="{Binding Messages}" Width="500" Height="153" >
+                                            <ListView.ItemTemplate>
+                                                <DataTemplate>
+                                                    <StackPanel Margin="0" Background="#7FDACD" Width="463">
+                                                        <Border>
+                                                            <StackPanel>
+                                                                <StackPanel Orientation="Horizontal">
+                                                                    <TextBlock Text="{Binding UserName}" FontWeight="Bold" FontSize="13"/>
+                                                                    <TextBlock Text=" ("/>
+                                                                    <TextBlock Text="{Binding When}" FontSize="13"/>
+                                                                    <TextBlock Text="):"/>
+                                                                </StackPanel>
+                                                                <StackPanel>
+                                                                    <TextBlock Text="{Binding Text}" FontSize="15"/>
+                                                                </StackPanel>
+                                                            </StackPanel>
+                                                        </Border>
+                                                    </StackPanel>
+                                                </DataTemplate>
+                                            </ListView.ItemTemplate>
+                                        </ListView>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
                         </StackPanel>
-                    </Border>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-
-
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+        <TextBox Grid.Column="1" Text="{Binding MessageText}" Margin="18,0,18,10" Grid.Row="1"/>
+        <Button Grid.Column="1" Grid.Row="2" Command="{Binding SendMessageCommand}" Content="Отправить сообщение"/>
+        <Image Grid.Row="3" Grid.Column="1" Source="Resource\Image\NewPage.png">
+            <Image.ToolTip >
+                <TextBlock Text="{Binding Tooltip}"/>
+            </Image.ToolTip>
+        </Image>
+        <Button Grid.Column="1" Grid.Row="4" Content="Перейти к тестам" Command="{Binding GoToTestCommand}"/>
     </Grid>
 </Page>

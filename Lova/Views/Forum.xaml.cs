@@ -10,6 +10,5 @@ namespace Presentation.Views
             InitializeComponent();
             DataContext = App.ForumViewModel;
         }
-
     }
 }

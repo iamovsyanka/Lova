@@ -51,5 +51,10 @@ namespace Models.Repositories
                 await context.SaveChangesAsync();
             }
         }
+
+        public string GetUserNameById(int userId)
+        {
+            return Get().FirstOrDefault(u => u.Id == userId).UserName;
+        }
     }
 }

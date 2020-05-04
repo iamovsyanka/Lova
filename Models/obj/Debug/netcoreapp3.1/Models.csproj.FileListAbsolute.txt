@@ -7,4 +7,3 @@ D:\Курсач\Lova\Models\obj\Debug\netcoreapp3.1\Models.AssemblyInfoInputs.ca
 D:\Курсач\Lova\Models\obj\Debug\netcoreapp3.1\Models.AssemblyInfo.cs
 D:\Курсач\Lova\Models\obj\Debug\netcoreapp3.1\Models.dll
 D:\Курсач\Lova\Models\obj\Debug\netcoreapp3.1\Models.pdb
-D:\Курсач\Lova\Models\obj\Debug\netcoreapp3.1\Models.csprojAssemblyReference.cache

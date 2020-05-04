@@ -59,3 +59,4 @@ D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Presentation.AssemblyInfo.cs
 D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Presentation.csproj.CopyComplete
 D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Presentation.dll
 D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Presentation.pdb
+D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Views\Resource\Style\Forum.baml
