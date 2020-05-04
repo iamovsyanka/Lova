@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\Authentication.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Forum.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Profil.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Registration.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Tests.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Authentication.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Forum.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Profil.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Registration.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Resource\Style\StartWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Tests.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
