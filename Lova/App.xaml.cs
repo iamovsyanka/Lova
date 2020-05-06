@@ -1,5 +1,4 @@
-﻿using Models.Models;
-using Presentation.ViewModels;
+﻿using Presentation.ViewModels;
 using Presentation.Views;
 using System.Windows;
 

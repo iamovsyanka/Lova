@@ -7,11 +7,11 @@ namespace Presentation.Views
 {
     public partial class CurrentTest : Page
     {
-        public CurrentTest(Test test)
+        public CurrentTest()
         {
             InitializeComponent();
 
-            CurrentTestViewModel currentTestViewModel = new CurrentTestViewModel(test);
+            CurrentTestViewModel currentTestViewModel = new CurrentTestViewModel();
             DataContext = currentTestViewModel;
         }
     }

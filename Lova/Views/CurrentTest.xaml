@@ -13,11 +13,22 @@
     </Page.DataContext>
     
     <Grid>
-        <ListView ItemsSource="{Binding Test}">
+        <ListView ItemsSource="{Binding Questions}" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
-                        <TextBlock Text="{Binding }"/>
+                        <TextBlock Text="{Binding Description}"/>
+                        <ListView ItemsSource="{Binding Variants}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <RadioButton>
+                                        <RadioButton.Content>
+                                            <TextBlock Text="{Binding Description}"/>
+                                        </RadioButton.Content>
+                                    </RadioButton>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>

@@ -4,6 +4,7 @@ using Models.Contexts;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace Models.Repositories
 {
@@ -52,5 +53,7 @@ namespace Models.Repositories
                 await context.SaveChangesAsync();
             }
         }
+
+        public IQueryable<Question> GetQuestionsByTestId(int testId) => Get().Where(q => q.TestId == testId);
     }
 }

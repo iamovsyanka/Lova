@@ -1,8 +1,10 @@
 ﻿using Lova;
 using Models.Commands;
+using Models.Current;
 using Models.Models;
 using Models.UnitOfWork;
 using System.Collections.ObjectModel;
+using System.Windows;
 using System.Windows.Input;
 
 namespace Presentation.ViewModels
@@ -50,8 +52,9 @@ namespace Presentation.ViewModels
         }
 
         private void CanGoToTest()
-        {
-            App.CurrentTestPage = new Views.CurrentTest(selectedTest);
+        {         
+            CurrentTest.SetTestId(selectedTest.TestId); 
+            App.CurrentTestPage = new Views.CurrentTest();
             App.ProfilViewModel.CurrentPage = App.CurrentTestPage;
         }
     }
