@@ -6,15 +6,20 @@ namespace Models.Models
     public class Test
     {
         [Key]
-        public int TestId { get; set; }
+        public virtual int TestId { get; set; }
+
         [Required]
         [MaxLength(100)]
-        public string Name { get; set; }
+        public virtual string Name { get; set; }
+
         [MaxLength(300)]
-        public string Description { get; set; }
-        public List<Question> Questions { get; set; }
-        public List<UserTest> UserTests { get; set; }
+        public virtual string Description { get; set; }
+
+        public virtual List<Question> Questions { get; set; }
+
+        public virtual List<UserTest> UserTests { get; set; }
+
         [Required]
-        public string Category { get; set; }
+        public virtual string Category { get; set; }
     }
 }

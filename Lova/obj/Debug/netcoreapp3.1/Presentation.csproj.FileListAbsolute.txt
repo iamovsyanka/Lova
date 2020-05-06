@@ -60,3 +60,8 @@ D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Presentation.csproj.CopyComple
 D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Presentation.dll
 D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Presentation.pdb
 D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Views\Resource\Style\Forum.baml
+D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Views\Resource\Style\Test.baml
+D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Views\UserTest.g.cs
+D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Views\UserTest.baml
+D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Views\CurrentTest.g.cs
+D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Views\CurrentTest.baml

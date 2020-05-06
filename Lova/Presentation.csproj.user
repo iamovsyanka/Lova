@@ -19,7 +19,13 @@
     <Compile Update="Views\Registration.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\CurrentTest.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Tests.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\UserTest.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -42,7 +48,16 @@
     <Page Update="Views\Resource\Style\StartWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\Resource\Style\Test.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\CurrentTest.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\Tests.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\UserTest.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

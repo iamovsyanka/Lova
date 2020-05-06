@@ -45,8 +45,6 @@ namespace Models.Repositories
 
             if (discussionToChange != null)
             {
-                discussionToChange.Forum = newDiscussion.Forum;
-                discussionToChange.ForumId = newDiscussion.ForumId;
                 discussionToChange.Messages = newDiscussion.Messages;
 
                 await context.SaveChangesAsync();

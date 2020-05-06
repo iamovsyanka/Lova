@@ -3,11 +3,11 @@ using System.Windows.Controls;
 
 namespace Presentation.Views
 {
-    public partial class Tests : Page
+    public partial class UserTest : Page
     {
-        public Tests()
+        public UserTest()
         {
-            InitializeComponent();           
+            InitializeComponent();
         }
     }
 }

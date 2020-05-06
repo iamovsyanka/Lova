@@ -6,16 +6,20 @@ namespace Models.Models
     public class Variant
     {
         [Key]
-        public int VariantId { get; set; }
+        public virtual int VariantId { get; set; }
+
         [Required]
         [ForeignKey("Question")]
-        public int QuestionId { get; set; }
+        public virtual int QuestionId { get; set; }
+
         [Required]
-        public Question Question { get; set; }
+        public virtual Question Question { get; set; }
+
         [Required]
         [MaxLength(300)]
-        public string Description { get; set; }
+        public virtual string Description { get; set; }
+
         [Required]
-        public bool IsTrue { get; set; }
+        public virtual bool IsTrue { get; set; }
     }
 }

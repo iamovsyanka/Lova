@@ -8,7 +8,6 @@ namespace Models.Contexts
         public DbSet<User> Users { get; set; }
         public DbSet<Test> Tests { get; set; }
         public DbSet<Discussion> Discussions { get; set; }
-        public DbSet<Forum> Forums { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<Question> Questions { get; set; }
         public DbSet<UserTest> UserTests { get; set; }

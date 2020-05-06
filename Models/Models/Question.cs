@@ -8,11 +8,17 @@ namespace Models.Models
     {
         [Key]
         public virtual int QuestionId { get; set; }
+
         [Required]
         [ForeignKey("Test")]
         public virtual int TestId { get; set; }
+
         [Required]
         public virtual Test Test { get; set; }
+
+        [Required]
+        public virtual string Description { get; set; }
+
         public virtual List<Variant> Variants { get; set; }
     }
 }

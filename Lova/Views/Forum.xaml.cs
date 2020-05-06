@@ -8,7 +8,7 @@ namespace Presentation.Views
         public Forum()
         {
             InitializeComponent();
-            DataContext = App.ForumViewModel;
+
         }
     }
 }

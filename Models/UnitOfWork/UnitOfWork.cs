@@ -8,7 +8,6 @@ namespace Models.UnitOfWork
     {
         private LovaContext lovaContext = new LovaContext();
         private DiscussionRepository discussionRepository;
-        private ForumRepository forumRepository;
         private MessageRepository messageRepository;
         private QuestionRepository questionRepository;
         private TestRepository testRepository;
@@ -26,19 +25,6 @@ namespace Models.UnitOfWork
                 }
 
                 return discussionRepository;
-            }
-        }
-
-        public ForumRepository ForumRepository
-        {
-            get
-            {
-                if (forumRepository == null)
-                {
-                    forumRepository = new ForumRepository(lovaContext);
-                }
-
-                return forumRepository;
             }
         }
 

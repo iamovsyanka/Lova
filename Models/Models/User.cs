@@ -21,7 +21,9 @@ namespace Models.Models
         [Required]
         [MinLength(6), MaxLength(20)]
         public virtual string Password { get; set; }
+
         public virtual List<UserTest> Tests { get; set; }
+
         public virtual List<Message> Messages { get; set; }
     }
 }

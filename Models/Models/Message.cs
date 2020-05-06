@@ -7,10 +7,10 @@ namespace Models.Models
     public class Message
     {
         [Key]
-        public int MessageId { get; set; }
+        public virtual int MessageId { get; set; }
 
         [Required]
-        public string Text { get; set; }
+        public virtual string Text { get; set; }
 
         [ForeignKey("Discussion")]
         [Required]
