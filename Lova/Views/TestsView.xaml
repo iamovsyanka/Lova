@@ -26,15 +26,8 @@
             <RowDefinition Height="127*"/>
             <RowDefinition Height="177*"/>
         </Grid.RowDefinitions>
-        <Label Grid.Row="0" Content="Тесты" HorizontalAlignment="Center" Width="40"/>
+        <Label Grid.Row="0" Grid.ColumnSpan="2" Content="Тесты" HorizontalAlignment="Center"/>
         <Grid Grid.Row="1" Grid.RowSpan="4" Grid.Column="0">
-            <!--<DataGrid ItemsSource="{Binding Tests}" SelectedItem="{Binding SelectedTest}" IsSynchronizedWithCurrentItem="True">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Название" Binding="{Binding Name}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Описание" Binding="{Binding Description}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Категория" Binding="{Binding Category}" IsReadOnly="True"/>
-                </DataGrid.Columns>
-            </DataGrid>-->
             <ListView ItemsSource="{Binding Tests}" SelectedItem="{Binding SelectedTest}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -60,7 +53,11 @@
                 </ListView.ItemTemplate>
             </ListView>
         </Grid>
+        <TextBox Grid.Column="1" Grid.Row="1" Text="{Binding TestName}" TextWrapping="Wrap" Width="140" Height="40"/>
+        <Button Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Left" Margin="140,0,0,0" Width="39" Command="{Binding SearchTestCommand}">
+            <Image Source="Resource\Image\Search.png"/>
+        </Button>
         <Button Grid.Column="1" Grid.Row="2" Content="Пройти тест" Command="{Binding GoToTestCommand}"/>
-        <Button Grid.Column="1" Grid.Row="4" Content="Перейти к тестам" Command="{Binding GoToForumCommand}"/>
+        <Button Grid.Column="1" Grid.Row="4" Content="Перейти к форуму" Command="{Binding GoToForumCommand}"/>
     </Grid>
 </Page>

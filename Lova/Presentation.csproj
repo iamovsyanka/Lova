@@ -10,6 +10,7 @@
     <None Remove="Views\Resource\Icons\Login.ico" />
     <None Remove="Views\Resource\Icons\Password.ico" />
     <None Remove="Views\Resource\Image\NewPage.png" />
+    <None Remove="Views\Resource\Image\Search.png" />
     <None Remove="Views\Resource\Image\User0.png" />
     <None Remove="Views\Resource\Image\User1.png" />
     <None Remove="Views\Resource\Image\User2.png" />
@@ -41,6 +42,7 @@
     <Resource Include="Views\Resource\Icons\Login.ico" />
     <Resource Include="Views\Resource\Icons\Password.ico" />
     <Resource Include="Views\Resource\Image\NewPage.png" />
+    <Resource Include="Views\Resource\Image\Search.png" />
     <Resource Include="Views\Resource\Image\User0.png" />
     <Resource Include="Views\Resource\Image\User1.png" />
     <Resource Include="Views\Resource\Image\User2.png" />
@@ -50,10 +52,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Page Update="Views\Authentication.xaml">
+    <Page Update="Views\AuthenticationView.xaml">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>
-    <Page Update="Views\Registration.xaml">
+    <Page Update="Views\RegistrationView.xaml">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>
   </ItemGroup>

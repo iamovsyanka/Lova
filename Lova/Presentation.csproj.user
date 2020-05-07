@@ -7,39 +7,39 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Views\Authentication.xaml.cs">
+    <Compile Update="Views\AuthenticationView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Forum.xaml.cs">
+    <Compile Update="Views\ForumView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Profil.xaml.cs">
+    <Compile Update="Views\ProfilView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Registration.xaml.cs">
+    <Compile Update="Views\RegistrationView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\CurrentTest.xaml.cs">
+    <Compile Update="Views\CurrentTestView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Tests.xaml.cs">
+    <Compile Update="Views\TestsView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\UserTest.xaml.cs">
+    <Compile Update="Views\UserTestView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Views\Authentication.xaml">
+    <Page Update="Views\AuthenticationView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Forum.xaml">
+    <Page Update="Views\ForumView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Profil.xaml">
+    <Page Update="Views\ProfilView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Registration.xaml">
+    <Page Update="Views\RegistrationView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Resource\Style\Forum.xaml">
@@ -51,13 +51,13 @@
     <Page Update="Views\Resource\Style\Test.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\CurrentTest.xaml">
+    <Page Update="Views\CurrentTestView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Tests.xaml">
+    <Page Update="Views\TestsView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\UserTest.xaml">
+    <Page Update="Views\UserTestView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

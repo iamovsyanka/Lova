@@ -13,19 +13,20 @@
     </Page.DataContext>
     
     <Grid>
-        <ListView ItemsSource="{Binding Questions}" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ListView  Grid.Column="0" ItemsSource="{Binding Questions}" SelectedItem="{Binding SelectedQuestion}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
-                        <TextBlock Text="{Binding Description}"/>
                         <ListView ItemsSource="{Binding Variants}">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
-                                    <RadioButton>
-                                        <RadioButton.Content>
-                                            <TextBlock Text="{Binding Description}"/>
-                                        </RadioButton.Content>
-                                    </RadioButton>
+                                    <StackPanel>
+                                        <RadioButton Content="{Binding Description}" IsChecked="{Binding }"/>
+                                    </StackPanel>
                                 </DataTemplate>
                             </ListView.ItemTemplate>
                         </ListView>
@@ -33,5 +34,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+              
+        <Button Grid.Column="1" Command="{Binding CheckTestCommand}"/>
     </Grid>
 </Page>

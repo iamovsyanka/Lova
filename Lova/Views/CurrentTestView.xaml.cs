@@ -1,6 +1,4 @@
-﻿using Lova;
-using Models.Models;
-using Presentation.ViewModels;
+﻿using Presentation.ViewModels;
 using System.Windows.Controls;
 
 namespace Presentation.Views
@@ -14,5 +12,6 @@ namespace Presentation.Views
             CurrentTestViewModel currentTestViewModel = new CurrentTestViewModel();
             DataContext = currentTestViewModel;
         }
+
     }
 }
