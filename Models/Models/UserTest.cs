@@ -24,9 +24,12 @@ namespace Models.Models
         public virtual Test Test { get; set; }
 
         [Required]
+        public virtual string TestName { get; set; }
+
+        [Required]
         public virtual DateTime SolvedTime { get; set; }
 
         [Required]
-        public virtual float Result { get; set; }
+        public virtual string Result { get; set; }
     }
 }

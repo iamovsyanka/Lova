@@ -51,5 +51,7 @@ namespace Models.Repositories
                 await context.SaveChangesAsync();
             }
         }
+
+        public IQueryable<UserTest> GetUserTestByUserId(int userId) => Get().Where(t => t.UserId == userId);
     }
 }

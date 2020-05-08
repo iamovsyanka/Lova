@@ -11,7 +11,6 @@ namespace Models.Contexts
         public DbSet<Message> Messages { get; set; }
         public DbSet<Question> Questions { get; set; }
         public DbSet<UserTest> UserTests { get; set; }
-        public DbSet<Variant> Variants { get; set; }
 
         public LovaContext()
         {

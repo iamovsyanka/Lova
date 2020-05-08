@@ -68,7 +68,7 @@
         <Setter Property="FontSize" Value="20"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
-
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
     </Style>
 
     <Style TargetType="Label">
@@ -76,7 +76,18 @@
         <Setter Property="FontSize" Value="19"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
 
+    <Style TargetType="DataGrid">
+        <Setter Property="AutoGenerateColumns" Value="False"/>
+        <Setter Property="CanUserResizeColumns" Value="False"/>
+        <Setter Property="CanUserResizeRows" Value="False"/>
+        <Setter Property="HorizontalScrollBarVisibility" Value="Auto"/>
+        <Setter Property="CanUserAddRows" Value="False"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="Background" Value="#FFBED9F0"/>
+        <Setter Property="BorderBrush" Value="#FF1D34C0"/>
     </Style>
 
 </ResourceDictionary>

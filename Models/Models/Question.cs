@@ -19,6 +19,7 @@ namespace Models.Models
         [Required]
         public virtual string Description { get; set; }
 
-        public virtual List<Variant> Variants { get; set; }
+        [Required]
+        public virtual string Answer { get; set; }
     }
 }

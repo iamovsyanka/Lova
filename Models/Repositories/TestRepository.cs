@@ -52,5 +52,6 @@ namespace Models.Repositories
             }
         }
 
+        public string GetTestNameById(int testId) => Get().First(t => t.TestId == testId).Name;
     }
 }

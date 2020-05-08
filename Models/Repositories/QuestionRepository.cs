@@ -48,7 +48,7 @@ namespace Models.Repositories
             {
                 questionToChange.Test = newQuestion.Test;
                 questionToChange.TestId = newQuestion.TestId;
-                questionToChange.Variants = newQuestion.Variants;
+                questionToChange.Answer= newQuestion.Answer;
                 
                 await context.SaveChangesAsync();
             }

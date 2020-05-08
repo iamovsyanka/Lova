@@ -13,7 +13,6 @@ namespace Models.UnitOfWork
         private TestRepository testRepository;
         private UserRepository userRepository;
         private UserTestRepository userTestRepository;
-        private VariantRepository variantRepository;
 
         public DiscussionRepository DiscussionRepository
         {
@@ -93,18 +92,6 @@ namespace Models.UnitOfWork
             }
         }
 
-        public VariantRepository VariantRepository
-        {
-            get
-            {
-                if (variantRepository == null)
-                {
-                    variantRepository = new VariantRepository(lovaContext);
-                }
-
-                return variantRepository;
-            }
-        }
 
         public void Save() => lovaContext.SaveChanges();
 
