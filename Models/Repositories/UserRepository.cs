@@ -52,9 +52,8 @@ namespace Models.Repositories
             }
         }
 
-        public string GetUserNameById(int userId)
-        {
-            return Get().FirstOrDefault(u => u.Id == userId).UserName;
-        }
+        public bool CheckAdmin(int userId) => Get().FirstOrDefault(u => u.Id == userId).Role == Enums.Role.Admin;
+
+        public string GetUserNameById(int userId) => Get().FirstOrDefault(u => u.Id == userId).UserName;
     }
 }

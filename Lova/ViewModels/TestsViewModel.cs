@@ -60,7 +60,7 @@ namespace Presentation.ViewModels
 
         private void GoToForum()
         {
-            App.ForumPage = new Views.Forum();
+            App.ForumPage = new Views.ForumView();
             App.ProfilViewModel.CurrentPage = App.ForumPage;
         }
 
@@ -69,7 +69,7 @@ namespace Presentation.ViewModels
             if (selectedTest != null) 
             {
                 CurrentTest.SetTestId(selectedTest.TestId);
-                App.CurrentTestPage = new Views.CurrentTest();
+                App.CurrentTestPage = new Views.CurrentTestView();
                 App.ProfilViewModel.CurrentPage = App.CurrentTestPage;
             }
             else
@@ -92,7 +92,7 @@ namespace Presentation.ViewModels
                         check = true;
 
                         CurrentTest.SetTestId(test.TestId);
-                        App.CurrentTestPage = new Views.CurrentTest();
+                        App.CurrentTestPage = new Views.CurrentTestView();
                         App.ProfilViewModel.CurrentPage = App.CurrentTestPage;
                     }
                 }

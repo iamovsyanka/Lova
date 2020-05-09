@@ -3,9 +3,9 @@ using System.Windows.Controls;
 
 namespace Presentation.Views
 {
-    public partial class UserTest : Page
+    public partial class UserTestView : Page
     {
-        public UserTest()
+        public UserTestView()
         {
             InitializeComponent();
         }

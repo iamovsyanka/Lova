@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 D:\Курсач\Lova\Lova\App.xaml
-10-1197456757
+11-1458457833
 
-18-1901023817
+20-2121985870
 213330643934
-Views\AuthenticationView.xaml;Views\CurrentTestView.xaml;Views\ForumView.xaml;Views\ProfilView.xaml;Views\RegistrationView.xaml;Views\Resource\Style\Forum.xaml;Views\Resource\Style\StartWindow.xaml;Views\Resource\Style\Test.xaml;Views\TestsView.xaml;Views\UserTestView.xaml;
+Views\AddDiscussionView.xaml;Views\AuthenticationView.xaml;Views\CurrentTestView.xaml;Views\ForumView.xaml;Views\ProfilView.xaml;Views\RegistrationView.xaml;Views\Resource\Style\Forum.xaml;Views\Resource\Style\StartWindow.xaml;Views\Resource\Style\Test.xaml;Views\TestsView.xaml;Views\UserTestView.xaml;
 
 False
 

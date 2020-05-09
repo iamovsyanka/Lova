@@ -4,7 +4,6 @@ using Models.UnitOfWork;
 using Models.Validation;
 using System;
 using System.Linq;
-using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Input;
 
@@ -16,6 +15,8 @@ namespace Presentation.ViewModels
         private string userName;
         private string password;
         private string confirmedPassword;
+
+        public ICommand SignUpCommand => new RelayCommand(obj => SignUp());
 
         public RegistrationViewModel()
         {
@@ -44,7 +45,7 @@ namespace Presentation.ViewModels
 
         public string ConfirmedPassword
         {
-            get { return confirmedPassword; }
+            private get => confirmedPassword;
             set
             {
                 confirmedPassword = value;
@@ -52,9 +53,7 @@ namespace Presentation.ViewModels
             }
         }
 
-        public ICommand SignUpCommand => new RelayCommand(obj => CanSignUp());
-
-        private async void CanSignUp()
+        private async void SignUp()
         {
             if (unitOfWork.UserRepository.Get().FirstOrDefault(user => user.UserName == UserName) != null)
             {

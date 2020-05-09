@@ -11,10 +11,12 @@ namespace Lova
         public static ForumViewModel ForumViewModel { get; set; } = new ForumViewModel();
         public static CurrentTestViewModel CurrentTestViewModel { get; set; } = new CurrentTestViewModel();
         public static UserTestViewModel UserTestViewModel { get; set; } = new UserTestViewModel();
+        public static AddDiscussionViewModel AdminViewModel { get; set; } = new AddDiscussionViewModel();
 
-        public static Forum ForumPage = new Forum();
-        public static Tests TestsPage = new Tests();
-        public static CurrentTest CurrentTestPage = new CurrentTest();
-        public static UserTest UserTestPage = new UserTest();
+        public static ForumView ForumPage = new ForumView();
+        public static TestsView TestsPage = new TestsView();
+        public static CurrentTestView CurrentTestPage = new CurrentTestView();
+        public static UserTestView UserTestPage = new UserTestView();
+        public static AddDiscussionView AdminViewPage = new AddDiscussionView();
     }
 }

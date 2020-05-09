@@ -1,14 +1,10 @@
 ﻿using Lova;
 using Models.Commands;
 using Models.Current;
-using Models.CurrentUser;
 using Models.Models;
 using Models.UnitOfWork;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Threading;
 using System.Windows;
 using System.Windows.Input;
 
@@ -104,19 +100,19 @@ namespace Presentation.ViewModels
 
             await unitOfWork.UserTestRepository.AddAsync(newUserTest);
 
-            App.UserTestPage= new Views.UserTest();
+            App.UserTestPage= new Views.UserTestView();
             App.ProfilViewModel.CurrentPage = App.UserTestPage;           
         }
 
         private void GoToForum()
         {
-            App.ForumPage = new Views.Forum();
+            App.ForumPage = new Views.ForumView();
             App.ProfilViewModel.CurrentPage = App.ForumPage;
         }
 
         private void GoToTest()
         {
-            App.TestsPage = new Views.Tests();
+            App.TestsPage = new Views.TestsView();
             App.ProfilViewModel.CurrentPage = App.TestsPage;
         }
     }

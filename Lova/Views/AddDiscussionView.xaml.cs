@@ -2,9 +2,9 @@
 
 namespace Presentation.Views
 {
-    public partial class CurrentTestView : Page
+    public partial class AddDiscussionView : Page
     {
-        public CurrentTestView()
+        public AddDiscussionView()
         {
             InitializeComponent();
         }

@@ -6,9 +6,9 @@ using System.Windows.Resources;
 
 namespace Presentation.Views
 {
-    public partial class Registration : Window
+    public partial class RegistrationView : Window
     {
-        public Registration()
+        public RegistrationView()
         {            
             InitializeComponent();
 

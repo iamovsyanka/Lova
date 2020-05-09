@@ -1,6 +1,6 @@
 ﻿using Lova;
 using Models.Commands;
-using Models.CurrentUser;
+using Models.Current;
 using Models.Models;
 using Models.UnitOfWork;
 using System.Collections.ObjectModel;
@@ -35,13 +35,13 @@ namespace Presentation.ViewModels
 
         private void GoToForum()
         {
-            App.ForumPage = new Views.Forum();
+            App.ForumPage = new Views.ForumView();
             App.ProfilViewModel.CurrentPage = App.ForumPage;
         }
 
         private void GoToTest()
         {
-            App.TestsPage = new Views.Tests();
+            App.TestsPage = new Views.TestsView();
             App.ProfilViewModel.CurrentPage = App.TestsPage;
         }
 

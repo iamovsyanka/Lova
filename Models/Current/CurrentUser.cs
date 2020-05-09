@@ -1,4 +1,4 @@
-﻿namespace Models.CurrentUser
+﻿namespace Models.Current
 {
     public static class CurrentUser
     {

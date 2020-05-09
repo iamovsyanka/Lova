@@ -1,12 +1,10 @@
 ﻿using Lova;
 using Models.Commands;
-using Models.CurrentUser;
+using Models.Current;
 using Models.Models;
 using Models.UnitOfWork;
 using System;
 using System.Collections.ObjectModel;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 
@@ -18,12 +16,12 @@ namespace Presentation.ViewModels
         private ObservableCollection<Discussion> discussions;
         private ObservableCollection<Message> messages;
         private Discussion selectedDiscussion;
-        private Message selectedMessage;
         private string messageText;
 
-        public ICommand SendMessageCommand => new RelayCommand(obj => CanSendMessage());
-        public ICommand GoToTestCommand => new RelayCommand(obj => CanGoToTest());
+        public ICommand SendMessageCommand => new RelayCommand(obj => SendMessage());
+        public ICommand GoToTestCommand => new RelayCommand(obj => GoToTest());
 
+        public ICommand GoToAdminCommand => new RelayCommand(obj => GoToAdmin());
 
         public ForumViewModel()
         {
@@ -31,6 +29,8 @@ namespace Presentation.ViewModels
 
             discussions = new ObservableCollection<Discussion>(unitOfWork.DiscussionRepository.Get());
             messages = new ObservableCollection<Message>(unitOfWork.MessageRepository.Get());
+
+            MessageBox.Show(unitOfWork.UserRepository.GetUserNameById(CurrentUser.GetUserId()));
         }
 
         //private Task Refresh()
@@ -73,16 +73,6 @@ namespace Presentation.ViewModels
             }
         }
 
-        public Message SelectedMessage
-        {
-            get => selectedMessage;
-            set
-            {
-                selectedMessage = value;
-                OnPropertyChanged("SelectedMessage");
-            }
-        }
-
         public string MessageText
         {
             get => messageText;
@@ -122,9 +112,10 @@ namespace Presentation.ViewModels
             }
         }
 
-        private async void CanSendMessage()
+        private async void SendMessage()
         {
-            try {
+            if(selectedDiscussion != null)
+            { 
                 var message = new Message()
                 {
                     DiscussionId = selectedDiscussion.DiscussionId,
@@ -135,35 +126,33 @@ namespace Presentation.ViewModels
                 };
                 await unitOfWork.MessageRepository.AddAsync(message);
 
-                App.ForumPage = new Views.Forum();
+                App.ForumPage = new Views.ForumView();
                 App.ProfilViewModel.CurrentPage = App.ForumPage;
             }
-            catch {
+            else 
+            {
                 MessageBox.Show("Упс... А вы не выбрали обсуждение для отправки сообщения :)");
             }
 
         }
 
-        private void CanGoToTest()
+        private void GoToTest()
         {
-            App.TestsPage = new Views.Tests();
+            App.TestsPage = new Views.TestsView();
             App.ProfilViewModel.CurrentPage = App.TestsPage;
         }
 
-        //private async void CanDeleteMessage()
-        //{
-        //    try {
-        //        if (selectedMessage.UserId == CurrentUser.GetUserId())
-        //        {
-        //            await unitOfWork.MessageRepository.RemoveAsync(selectedMessage.MessageId);
-        //        }
-
-        //        App.ForumPage = new Views.Forum();
-        //        App.ProfilViewModel.CurrentPage = App.ForumPage;
-        //    }
-        //    catch {
-        //        MessageBox.Show("Упс... А вы не выбрали сообщение для удаления");
-        //    }
-        //}
+        private void GoToAdmin()
+        {
+            if(unitOfWork.UserRepository.CheckAdmin(CurrentUser.GetUserId()))
+            {
+                App.AdminViewPage= new Views.AddDiscussionView();
+                App.ProfilViewModel.CurrentPage = App.AdminViewPage;
+            }
+            else
+            {
+                MessageBox.Show("Извините, эта функции доступна только для администратора");
+            }
+        }
     }
 }

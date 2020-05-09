@@ -3,12 +3,11 @@ using System.Windows.Controls;
 
 namespace Presentation.Views
 {
-    public partial class Forum : Page
+    public partial class ForumView : Page
     {
-        public Forum()
+        public ForumView()
         {
             InitializeComponent();
-
         }
     }
 }

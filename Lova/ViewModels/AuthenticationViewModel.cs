@@ -1,5 +1,5 @@
 ﻿using Models.Commands;
-using Models.CurrentUser;
+using Models.Current;
 using Models.UnitOfWork;
 using Models.Validation;
 using Presentation.Views;
@@ -76,8 +76,9 @@ namespace Presentation.ViewModels
                 if (Validation.GetHashString(Password) == currentUser.Password)
                 {
                     CurrentUser.SetUserId(currentUser.Id);
-                    var profil = new Profil();
-                    profil.Show();
+
+                    var profil = new ProfilView();
+                    profil.ShowDialog();                   
                 }
                 else
                 {

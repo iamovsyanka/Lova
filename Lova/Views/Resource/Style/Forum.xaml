@@ -73,7 +73,7 @@
         <Setter Property="FontSize" Value="19"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
-        
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
     </Style>
 
    

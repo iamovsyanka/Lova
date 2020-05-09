@@ -6,9 +6,9 @@ using System.Windows.Resources;
 
 namespace Presentation.Views
 {
-    public partial class Profil : Window
+    public partial class ProfilView : Window
     {
-        public Profil()
+        public ProfilView()
         {
             InitializeComponent();
 

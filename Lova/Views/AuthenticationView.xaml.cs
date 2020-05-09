@@ -6,9 +6,9 @@ using System.Windows.Resources;
 
 namespace Presentation.Views
 {
-    public partial class Authentication : Window
+    public partial class AuthenticationView : Window
     {
-        public Authentication()
+        public AuthenticationView()
         {
             InitializeComponent();
 
@@ -27,7 +27,7 @@ namespace Presentation.Views
 
         private void Hyperlink_Click(object sender, RoutedEventArgs e)
         {
-            Registration registration = new Registration();
+            var registration = new RegistrationView();
             registration.Show();
         }
     }
