@@ -1,6 +1,7 @@
 ﻿using Models.Commands;
 using Models.CurrentUser;
 using Models.UnitOfWork;
+using Models.Validation;
 using Presentation.Views;
 using System;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace Presentation.ViewModels
         private string userName;
         private string password;
 
-        public ICommand LoginCommand => new RelayCommand(obj => CanLogin());
+        public ICommand LoginCommand => new RelayCommand(obj => Login());
 
         public AuthenticationViewModel()
         {
@@ -67,12 +68,12 @@ namespace Presentation.ViewModels
             }
         }
 
-        private void CanLogin()
+        private void Login()
         {
             var currentUser = unitOfWork.UserRepository.Get().FirstOrDefault(user => user.UserName == UserName);
             if (currentUser != null)
             {
-                if (Password == currentUser.Password)
+                if (Validation.GetHashString(Password) == currentUser.Password)
                 {
                     CurrentUser.SetUserId(currentUser.Id);
                     var profil = new Profil();
@@ -80,12 +81,12 @@ namespace Presentation.ViewModels
                 }
                 else
                 {
-                    MessageBox.Show("Login or Password isn't correctly");
+                    MessageBox.Show("Пароль введен с ошибкой, попробуйте ещё раз :)");
                 }
             }
             else
             {
-                MessageBox.Show("Login or Password isn't correctly");
+                MessageBox.Show("Такого пользователя не существует или логин введен с ошибкой, попробуйте ещё раз :)");
             }
         }
     }

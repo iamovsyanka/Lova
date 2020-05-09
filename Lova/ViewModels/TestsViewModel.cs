@@ -17,8 +17,8 @@ namespace Presentation.ViewModels
         private Test selectedTest;
         private string testName;
 
-        public ICommand GoToForumCommand => new RelayCommand(obj => CanGoToForum());
-        public ICommand GoToTestCommand => new RelayCommand(obj => CanGoToTest());
+        public ICommand GoToForumCommand => new RelayCommand(obj => GoToForum());
+        public ICommand GoToTestCommand => new RelayCommand(obj => GoToTest());
         public ICommand SearchTestCommand => new RelayCommand(obj => SearchTest());
 
         public TestsViewModel()
@@ -58,17 +58,24 @@ namespace Presentation.ViewModels
             }
         }
 
-        private void CanGoToForum()
+        private void GoToForum()
         {
             App.ForumPage = new Views.Forum();
             App.ProfilViewModel.CurrentPage = App.ForumPage;
         }
 
-        private void CanGoToTest()
-        {         
-            CurrentTest.SetTestId(selectedTest.TestId); 
-            App.CurrentTestPage = new Views.CurrentTest();
-            App.ProfilViewModel.CurrentPage = App.CurrentTestPage;
+        private void GoToTest()
+        {
+            if (selectedTest != null) 
+            {
+                CurrentTest.SetTestId(selectedTest.TestId);
+                App.CurrentTestPage = new Views.CurrentTest();
+                App.ProfilViewModel.CurrentPage = App.CurrentTestPage;
+            }
+            else
+            {
+                MessageBox.Show("Упс... А вы не выбрали тест :)");
+            }
         }
 
         private void SearchTest()

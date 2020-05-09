@@ -7,7 +7,7 @@
         xmlns:vm="clr-namespace:Presentation.ViewModels"
         mc:Ignorable="d" 
         Title="Registration" 
-        Width="410" Height="360" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#3B6BBB">
+        Width="410" Height="360" WindowStartupLocation="CenterScreen" Background="#3B6BBB">
 
     <Window.DataContext>
         <vm:RegistrationViewModel/>

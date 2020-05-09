@@ -1,5 +1,8 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
+using System.Windows.Resources;
 
 namespace Presentation.Views
 {
@@ -8,6 +11,11 @@ namespace Presentation.Views
         public Registration()
         {            
             InitializeComponent();
+
+            StreamResourceInfo sri = Application.GetResourceStream(
+                new Uri("Views/Resource/Cursor/cat.ani", UriKind.Relative));
+            var customCursor = new Cursor(sri.Stream);
+            Cursor = customCursor;
         }
 
         private void password_PasswordChanged(object sender, RoutedEventArgs e)

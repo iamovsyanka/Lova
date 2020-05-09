@@ -17,13 +17,8 @@ namespace Models.Contexts
 
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Server=LAPTOP-ADTTMHK8\\SQLEXPRESS;Database=LovaApp;Trusted_Connection=True;");
-        }
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-        }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseSqlServer("Server=LAPTOP-ADTTMHK8\\SQLEXPRESS;Database=LovaApp;Trusted_Connection=True;");
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder) => base.OnModelCreating(modelBuilder);
     }
 }

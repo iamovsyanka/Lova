@@ -1,6 +1,7 @@
 ﻿using Models.Commands;
 using Models.Models;
 using Models.UnitOfWork;
+using Models.Validation;
 using System;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -57,7 +58,7 @@ namespace Presentation.ViewModels
         {
             if (unitOfWork.UserRepository.Get().FirstOrDefault(user => user.UserName == UserName) != null)
             {
-                MessageBox.Show("User has already existed");
+                MessageBox.Show("Упс... Пользователь с таким именем уже существует :)");
                 return;
             }
 
@@ -66,7 +67,8 @@ namespace Presentation.ViewModels
                 var newUser = new User()
                 {
                     UserName = userName,
-                    Password = password,
+                    Password = Validation.GetHashString(password),
+                    Role = Models.Enums.Role.User
                 };
                 await unitOfWork.UserRepository.AddAsync(newUser);                   
             }
@@ -74,24 +76,21 @@ namespace Presentation.ViewModels
 
         private bool CheckField()
         {
-            Regex regexLogin = new Regex(@"^[A-zА-я\d]+$");
-            Regex regexPassword = new Regex(@"^[A-Za-z\d]+$");
-
-            if (!regexLogin.IsMatch(UserName))
+            if (!Validation.regexLogin.IsMatch(UserName))
             {
-                MessageBox.Show("Login is not validated");
+                MessageBox.Show("Логин может содержать только цифры и буквы :)");
                 return false;
             }
 
-            else if (!regexPassword.IsMatch(Password) || Password.Length < 6)
+            else if (!Validation.regexPassword.IsMatch(Password) || Password.Length < 6)
             {
-                MessageBox.Show("Password is not validated");
+                MessageBox.Show("Пароль может содержать только цифры и буквы латинского алфавита :)");
                 return false;
             }
 
             else if (Password != ConfirmedPassword)
             {
-                MessageBox.Show("Confirmed Password is not equal to Password");
+                MessageBox.Show("Пароли не совпадают, попробуйте ещё :)");
                 return false;
             }
 

@@ -1,7 +1,10 @@
-﻿using Models.CurrentUser;
+﻿using Lova;
+using Models.Commands;
+using Models.CurrentUser;
 using Models.Models;
 using Models.UnitOfWork;
 using System.Collections.ObjectModel;
+using System.Windows.Input;
 
 namespace Presentation.ViewModels
 {
@@ -9,6 +12,9 @@ namespace Presentation.ViewModels
     {
         private readonly UnitOfWork unitOfWork;
         private ObservableCollection<UserTest> userTests;
+
+        public ICommand GoToForumCommand => new RelayCommand(obj => GoToForum());
+        public ICommand GoToTestCommand => new RelayCommand(obj => GoToTest());
 
         public UserTestViewModel()
         {
@@ -25,6 +31,18 @@ namespace Presentation.ViewModels
                 userTests = value;
                 OnPropertyChanged("UserTests");
             }
+        }
+
+        private void GoToForum()
+        {
+            App.ForumPage = new Views.Forum();
+            App.ProfilViewModel.CurrentPage = App.ForumPage;
+        }
+
+        private void GoToTest()
+        {
+            App.TestsPage = new Views.Tests();
+            App.ProfilViewModel.CurrentPage = App.TestsPage;
         }
 
     }

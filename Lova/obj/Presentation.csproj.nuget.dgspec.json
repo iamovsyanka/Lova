@@ -85,9 +85,6 @@
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             },
-            "Microsoft.WindowsDesktop.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.WindowsDesktop.App.WPF": {
               "privateAssets": "none"
             }

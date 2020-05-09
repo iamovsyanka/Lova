@@ -24,8 +24,8 @@ namespace Presentation.ViewModels
 
         public ICommand SaveAnswerCommand => new RelayCommand(obj => AddAnswer());
         public ICommand CheckTestCommand => new RelayCommand(obj => CheckTest());
-        public ICommand GoToForumCommand => new RelayCommand(obj => CanGoToForum());
-        public ICommand GoToTestCommand => new RelayCommand(obj => CanGoToTest());
+        public ICommand GoToForumCommand => new RelayCommand(obj => GoToForum());
+        public ICommand GoToTestCommand => new RelayCommand(obj => GoToTest());
 
         public CurrentTestViewModel()
         {
@@ -108,13 +108,13 @@ namespace Presentation.ViewModels
             App.ProfilViewModel.CurrentPage = App.UserTestPage;           
         }
 
-        private void CanGoToForum()
+        private void GoToForum()
         {
             App.ForumPage = new Views.Forum();
             App.ProfilViewModel.CurrentPage = App.ForumPage;
         }
 
-        private void CanGoToTest()
+        private void GoToTest()
         {
             App.TestsPage = new Views.Tests();
             App.ProfilViewModel.CurrentPage = App.TestsPage;

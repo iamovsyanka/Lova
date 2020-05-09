@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Models.Enums;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Models.Models
@@ -19,8 +21,10 @@ namespace Models.Models
         public virtual string UserName { get; set; }
         
         [Required]
-        [MinLength(6), MaxLength(20)]
-        public virtual string Password { get; set; }
+        public virtual Guid Password { get; set; }
+
+        [Required]
+        public virtual Role Role { get; set; }
 
         public virtual List<UserTest> Tests { get; set; }
 
