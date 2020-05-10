@@ -15,6 +15,7 @@ namespace Presentation.ViewModels
 
         public ICommand GoToForumCommand => new RelayCommand(obj => GoToForum());
         public ICommand GoToTestCommand => new RelayCommand(obj => GoToTest());
+        public ICommand GoToCalculatorCommand => new RelayCommand(obj => GoToCalculator());
 
         public UserTestViewModel()
         {
@@ -44,6 +45,10 @@ namespace Presentation.ViewModels
             App.TestsPage = new Views.TestsView();
             App.ProfilViewModel.CurrentPage = App.TestsPage;
         }
-
+        private void GoToCalculator()
+        {
+            App.CalculatorViewPage = new Views.CalculatorView();
+            App.ProfilViewModel.CurrentPage = App.CalculatorViewPage;
+        }
     }
 }

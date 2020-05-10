@@ -75,7 +75,8 @@
                 <TextBlock Text="{Binding Tooltip}"/>
             </Image.ToolTip>
         </Image>
-        <Button Grid.Column="1" Grid.Row="4" Content="Перейти к тестам" Command="{Binding GoToTestCommand}"/>
+        <Button Grid.Column="1" Grid.Row="4" Content="Тесты" Command="{Binding GoToTestCommand}" Margin="0,54,0,0" VerticalAlignment="Top"/>
         <Button Grid.Column="1" Grid.Row="4" Content="Добавить обсуждение" VerticalAlignment="Top" Command="{Binding AddDiscussionCommand}"/>
+        <Button Grid.Column="1" Grid.Row="4" Content="Калькулятор" VerticalAlignment="Top" Command="{Binding GoToCalculatorCommand}" HorizontalAlignment="Left" Margin="38,111,0,0"/>
     </Grid>
 </Page>

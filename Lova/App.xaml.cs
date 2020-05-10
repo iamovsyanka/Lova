@@ -15,6 +15,8 @@ namespace Lova
         public static RemoveDiscussionViewModel RemoveDiscussionViewModel { get; set; } = new RemoveDiscussionViewModel();
         public static AddTestViewModel AddTestViewModel { get; set; } = new AddTestViewModel();
         public static AddQuestionsViewModel AddQuestionsViewModel { get; set; } = new AddQuestionsViewModel();
+        public static CalculatorViewModel CalculatorViewModel { get; set; } = new CalculatorViewModel();
+        public static LevensteinViewModel LevensteinViewModel { get; set; } = new LevensteinViewModel();
 
         public static ForumView ForumPage = new ForumView();
         public static TestsView TestsPage = new TestsView();
@@ -24,5 +26,7 @@ namespace Lova
         public static RemoveDiscussionView RemoveDiscussionViewPage = new RemoveDiscussionView();
         public static AddTestView AddTestViewPage = new AddTestView();
         public static AddQuestionsView AddQuestionsViewPage = new AddQuestionsView();
+        public static CalculatorView CalculatorViewPage = new CalculatorView();
+        public static LevensteinView LevensteinViewPage = new LevensteinView();
     }
 }

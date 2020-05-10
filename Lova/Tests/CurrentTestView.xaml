@@ -57,7 +57,7 @@
         <TextBox Grid.Column="0" Grid.Row="2" Width="400" Height="50" VerticalAlignment="Top" Text="{Binding Answer, Mode=TwoWay}"/>
         <Button Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" Height="50" Width="150" VerticalAlignment="Top"  Command="{Binding SaveAnswerCommand}" Content="Сохранить ответ"/>
         <Button Grid.Column="0" Grid.Row="2" Width="300" Height="60" HorizontalAlignment="Left" Command="{Binding CheckTestCommand}"  Content="Проверить тест" VerticalAlignment="Top" Margin="140,69,0,0"/>
-        <Button Grid.Column="1" Grid.Row="2" Content="Перейти к форуму" Command="{Binding GoToForumCommand}" Margin="0,75,0,0" VerticalAlignment="Top" Height="40" Width="170"/>
-        <Button Grid.Column="1" Grid.Row="2" Content="Перейти к тестам" Command="{Binding GoToTestCommand}" Margin="0,11,0,0" VerticalAlignment="Top" Height="40" Width="170"/>
+        <Button Grid.Column="1" Grid.Row="2" Content="Форум" Command="{Binding GoToForumCommand}" Margin="0,75,0,0" VerticalAlignment="Top" Height="40" Width="170"/>
+        <Button Grid.Column="1" Grid.Row="2" Content="Тесты" Command="{Binding GoToTestCommand}" Margin="0,11,0,0" VerticalAlignment="Top" Height="40" Width="170"/>
     </Grid>
 </Page>

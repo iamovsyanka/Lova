@@ -58,8 +58,8 @@
             <Image Source="..\Views\Resource\Image\Search.png"/>
         </Button>
         <Button Grid.Column="1" Grid.Row="2" Content="Пройти тест" Command="{Binding GoToTestCommand}" Height="40" Width="170"/>
-        <Button Grid.Column="1" Grid.Row="4" Content="Перейти к форуму" Command="{Binding GoToForumCommand}" VerticalAlignment="Top" Height="40" Width="170"/>
-        <Button Grid.Column="1" Grid.Row="4" Content="Перейти к результатам" Command="{Binding GoToUserTestCommand}" Margin="0,60,0,0" VerticalAlignment="Top" Height="40" Width="170"/>
+        <Button Grid.Column="1" Grid.Row="4" Content="Форум" Command="{Binding GoToForumCommand}" VerticalAlignment="Top" Height="40" Width="170"/>
+        <Button Grid.Column="1" Grid.Row="4" Content="Результаты" Command="{Binding GoToUserTestCommand}" Margin="0,60,0,0" VerticalAlignment="Top" Height="40" Width="170"/>
         <Button Grid.Column="1" Grid.Row="4" Content="Добавить тест" Command="{Binding AddTestCommand}" Margin="0,118,0,0" VerticalAlignment="Top" Height="40" Width="170"/>
         <Image Grid.Row="3" Grid.Column="1" Source="..\Views\Resource\Image\NewPage.png">
             <Image.ToolTip >

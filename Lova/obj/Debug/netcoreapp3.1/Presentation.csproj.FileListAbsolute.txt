@@ -73,3 +73,10 @@ D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Tests\AddQuestionsView.g.cs
 D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Tests\AddQuestionsView.baml
 D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Forum\RemoveDiscussion.g.cs
 D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Forum\RemoveDiscussion.baml
+D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Calculator\CalculatorView.g.cs
+D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Calculator\CalculatorView.baml
+D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Views\Resource\Style\Calculator.baml
+D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Calculator\LevensteinView.g.cs
+D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Calculator\LevensteinView.baml
+D:\Курсач\Lova\Lova\bin\Debug\netcoreapp3.1\Calculator.dll
+D:\Курсач\Lova\Lova\bin\Debug\netcoreapp3.1\Calculator.pdb

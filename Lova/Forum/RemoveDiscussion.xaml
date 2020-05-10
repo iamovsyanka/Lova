@@ -32,8 +32,8 @@
         <TextBox Grid.Row="1" Grid.Column="1" Margin="0,61,0,0" Text="{Binding  DiscussionName, Mode=TwoWay}"/>
         <Image Grid.Column="2" Grid.Row="1" Source="..\Views\Resource\Image\Remove.png"/>
         <Button Grid.Row="3" Grid.ColumnSpan="2" Content="Удалить обсуждение" Width="254" Height="51" Command="{Binding RemoveDiscussionCommand}"/>
-        <Button Grid.Column="2" Grid.Row="3" Content="Перейти к тестам" Command="{Binding GoToTestCommand}" Margin="0,100,0,0" VerticalAlignment="Top" Height="40" Width="170"/>
-        <Button Grid.Column="2" Grid.Row="3" Content="Перейти к форуму" Command="{Binding GoToForumCommand}" Margin="0,24,0,0" VerticalAlignment="Top" Height="40" Width="170"/>
+        <Button Grid.Column="2" Grid.Row="3" Content="Тесты" Command="{Binding GoToTestCommand}" Margin="0,100,0,0" VerticalAlignment="Top" Height="40" Width="170"/>
+        <Button Grid.Column="2" Grid.Row="3" Content="Форум" Command="{Binding GoToForumCommand}" Margin="0,24,0,0" VerticalAlignment="Top" Height="40" Width="170"/>
         <Button Grid.Column="2" Grid.Row="2" Content="Добавить обсуждение" Command="{Binding AddDiscussionCommand}" Margin="0,24,0,0" VerticalAlignment="Top" Height="40" Width="170"/>
     </Grid>
 </Page>

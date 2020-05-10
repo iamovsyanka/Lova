@@ -39,6 +39,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Calculator\Calculator.csproj" />
     <ProjectReference Include="..\Models\Models.csproj" />
   </ItemGroup>
 

@@ -1,0 +1,8 @@
+D:\Курсач\Lova\Calculator\bin\Debug\netcoreapp3.1\Calculator.deps.json
+D:\Курсач\Lova\Calculator\bin\Debug\netcoreapp3.1\Calculator.dll
+D:\Курсач\Lova\Calculator\bin\Debug\netcoreapp3.1\Calculator.pdb
+D:\Курсач\Lova\Calculator\obj\Debug\netcoreapp3.1\Calculator.AssemblyInfoInputs.cache
+D:\Курсач\Lova\Calculator\obj\Debug\netcoreapp3.1\Calculator.AssemblyInfo.cs
+D:\Курсач\Lova\Calculator\obj\Debug\netcoreapp3.1\Calculator.dll
+D:\Курсач\Lova\Calculator\obj\Debug\netcoreapp3.1\Calculator.pdb
+D:\Курсач\Lova\Calculator\obj\Debug\netcoreapp3.1\Calculator.csprojAssemblyReference.cache

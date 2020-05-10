@@ -20,6 +20,8 @@ namespace Presentation.ViewModels
 
         public ICommand SendMessageCommand => new RelayCommand(obj => SendMessage());
         public ICommand GoToTestCommand => new RelayCommand(obj => GoToTest());
+        public ICommand GoToCalculatorCommand => new RelayCommand(obj => GoToCalculator());
+
         public ICommand AddDiscussionCommand => new RelayCommand(obj => AddDiscussion());
 
         public ForumViewModel()
@@ -131,13 +133,7 @@ namespace Presentation.ViewModels
                 MessageBox.Show("Упс... А вы не выбрали обсуждение для отправки сообщения :)");
             }
 
-        }
-
-        private void GoToTest()
-        {
-            App.TestsPage = new Views.TestsView();
-            App.ProfilViewModel.CurrentPage = App.TestsPage;
-        }
+        }  
 
         private void AddDiscussion()
         {
@@ -150,6 +146,17 @@ namespace Presentation.ViewModels
             {
                 MessageBox.Show("Извините, эта функции доступна только для администратора");
             }
+        }   
+        private void GoToTest()
+        {
+            App.TestsPage = new Views.TestsView();
+            App.ProfilViewModel.CurrentPage = App.TestsPage;
+        }
+
+        private void GoToCalculator()
+        {
+            App.CalculatorViewPage = new Views.CalculatorView();
+            App.ProfilViewModel.CurrentPage = App.CalculatorViewPage;
         }
     }
 }

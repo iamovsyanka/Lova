@@ -36,8 +36,9 @@
                 <DataGridTextColumn Binding="{Binding SolvedTime}" Header="Время прохождения" IsReadOnly="True"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Grid.Column="1" Grid.Row="2" Content="Перейти к форуму" Command="{Binding GoToForumCommand}" Height="40" Width="170"/>
-        <Button Grid.Column="1" Grid.Row="3" Content="Перейти к тестам" Command="{Binding GoToTestCommand}" Height="40" Width="170"/>
+        <Button Grid.Column="1" Grid.Row="2" Content="Форум" Command="{Binding GoToForumCommand}" Height="40" Width="170"/>
+        <Button Grid.Column="1" Grid.Row="3" Content="Тесты" Command="{Binding GoToTestCommand}" Height="40" Width="170"/>
+        <Button Grid.Column="2" Grid.Row="2" Content="Калькулятор" Command="{Binding GoToCalculatorCommand}" />
         <Image Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Source="..\Views\Resource\Image\Result.png" VerticalAlignment="Center" HorizontalAlignment="Center" Width="180"/>
     </Grid>
 </Page>
