@@ -1,0 +1,70 @@
+﻿<Page x:Class="Presentation.Views.TestsView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:vm="clr-namespace:Presentation.ViewModels"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Tests">
+
+    <Page.DataContext>
+        <vm:TestsViewModel/>
+    </Page.DataContext>
+    <Page.Resources>
+        <ResourceDictionary Source="..\Views\Resource\Style\Test.xaml"/>
+    </Page.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="621*"/>
+            <ColumnDefinition Width="179*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="57*"/>
+            <RowDefinition Height="127*"/>
+            <RowDefinition Height="177*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.ColumnSpan="2" Content="Тесты" Height="31" Width="60"/>
+        <Grid Grid.Row="1" Grid.RowSpan="4" Grid.Column="0">
+            <ListView ItemsSource="{Binding Tests}" SelectedItem="{Binding SelectedTest}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <Border BorderBrush="#8570E0" BorderThickness="1" Width="600">
+                                <StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Название: " FontSize="15"/>
+                                        <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="16"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Описание: " FontSize="15"/>
+                                        <TextBlock Text="{Binding Description}" FontSize="16"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Категория: " FontSize="15"/>
+                                        <TextBlock Text="{Binding Category}" FontSize="16"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+        <TextBox Grid.Column="1" Grid.Row="1" Text="{Binding TestName}" TextWrapping="Wrap" Width="140" Height="40"/>
+        <Button Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Left" Margin="140,0,0,0" Width="39" Command="{Binding SearchTestCommand}" Height="40">
+            <Image Source="..\Views\Resource\Image\Search.png"/>
+        </Button>
+        <Button Grid.Column="1" Grid.Row="2" Content="Пройти тест" Command="{Binding GoToTestCommand}" Height="40" Width="170"/>
+        <Button Grid.Column="1" Grid.Row="4" Content="Перейти к форуму" Command="{Binding GoToForumCommand}" VerticalAlignment="Top" Height="40" Width="170"/>
+        <Button Grid.Column="1" Grid.Row="4" Content="Перейти к результатам" Command="{Binding GoToUserTestCommand}" Margin="0,60,0,0" VerticalAlignment="Top" Height="40" Width="170"/>
+        <Button Grid.Column="1" Grid.Row="4" Content="Добавить тест" Command="{Binding AddTestCommand}" Margin="0,118,0,0" VerticalAlignment="Top" Height="40" Width="170"/>
+        <Image Grid.Row="3" Grid.Column="1" Source="..\Views\Resource\Image\NewPage.png">
+            <Image.ToolTip >
+                <TextBlock Text="{Binding Tooltip}"/>
+            </Image.ToolTip>
+        </Image>
+    </Grid>
+</Page>

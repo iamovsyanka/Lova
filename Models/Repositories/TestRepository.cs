@@ -52,6 +52,11 @@ namespace Models.Repositories
             }
         }
 
-        public string GetTestNameById(int testId) => Get().First(t => t.TestId == testId).Name;
+        public string GetTestNameById(int testId)
+        {
+            var test = Get().FirstOrDefault(t => t.TestId == testId);
+            return test != null ? test.Name : "";
+        }
+
     }
 }

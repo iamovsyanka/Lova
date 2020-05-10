@@ -7,13 +7,19 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Views\AddDiscussionView.xaml.cs">
+    <Compile Update="Forum\AddDiscussionView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Tests\AddTestView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Tests\AddQuestionsView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\AuthenticationView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\ForumView.xaml.cs">
+    <Compile Update="Forum\ForumView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\ProfilView.xaml.cs">
@@ -22,30 +28,42 @@
     <Compile Update="Views\RegistrationView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\CurrentTestView.xaml.cs">
+    <Compile Update="Tests\CurrentTestView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\TestsView.xaml.cs">
+    <Compile Update="Tests\TestsView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\UserTestView.xaml.cs">
+    <Compile Update="Tests\UserTestView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Forum\RemoveDiscussion.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Views\AddDiscussionView.xaml">
+    <Page Update="Forum\AddDiscussionView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Tests\AddTestView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Tests\AddQuestionsView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\AuthenticationView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\ForumView.xaml">
+    <Page Update="Forum\ForumView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\ProfilView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\RegistrationView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Forum\RemoveDiscussion.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Resource\Style\Forum.xaml">
@@ -57,13 +75,13 @@
     <Page Update="Views\Resource\Style\Test.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\CurrentTestView.xaml">
+    <Page Update="Tests\CurrentTestView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\TestsView.xaml">
+    <Page Update="Tests\TestsView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\UserTestView.xaml">
+    <Page Update="Tests\UserTestView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

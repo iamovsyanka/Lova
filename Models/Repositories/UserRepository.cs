@@ -52,8 +52,13 @@ namespace Models.Repositories
             }
         }
 
-        public bool CheckAdmin(int userId) => Get().FirstOrDefault(u => u.Id == userId).Role == Enums.Role.Admin;
+        public bool IsAdmin(int userId) => Get().FirstOrDefault(u => u.Id == userId).Role == Enums.Role.Admin;
 
-        public string GetUserNameById(int userId) => Get().FirstOrDefault(u => u.Id == userId).UserName;
+        public string GetUserNameById(int userId)
+        {
+            var user = Get().FirstOrDefault(u => u.Id == userId);
+            return user != null ? user.UserName : "";
+        }
+
     }
 }

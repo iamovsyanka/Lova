@@ -7,6 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Presentation", "Lova\Presen
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{6ED8DD9D-9B60-4824-9CCC-6BE5C92F69E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestApp", "UnitTestApp\UnitTestApp.csproj", "{1C90DA65-4D30-469B-A2C0-3B453933C6FC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B75A2735-33E9-42A0-950B-83C9C3F0430A} = {B75A2735-33E9-42A0-950B-83C9C3F0430A}
+		{6ED8DD9D-9B60-4824-9CCC-6BE5C92F69E6} = {6ED8DD9D-9B60-4824-9CCC-6BE5C92F69E6}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +27,10 @@ Global
 		{6ED8DD9D-9B60-4824-9CCC-6BE5C92F69E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6ED8DD9D-9B60-4824-9CCC-6BE5C92F69E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6ED8DD9D-9B60-4824-9CCC-6BE5C92F69E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C90DA65-4D30-469B-A2C0-3B453933C6FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C90DA65-4D30-469B-A2C0-3B453933C6FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C90DA65-4D30-469B-A2C0-3B453933C6FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C90DA65-4D30-469B-A2C0-3B453933C6FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

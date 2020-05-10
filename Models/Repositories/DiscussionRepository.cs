@@ -45,8 +45,20 @@ namespace Models.Repositories
 
             if (discussionToChange != null)
             {
-                discussionToChange.Messages = newDiscussion.Messages;
+                discussionToChange.DiscussionName = newDiscussion.DiscussionName;
+                discussionToChange.Text = newDiscussion.Text;
 
+                await context.SaveChangesAsync();
+            }
+        }
+
+        public async Task RemoveByNameAsync(string discussionName)
+        {
+            var discussionToRemove = await Get().FirstOrDefaultAsync(d => d.DiscussionName == discussionName);
+
+            if (discussionToRemove != null)
+            {
+                context.Discussions.Remove(discussionToRemove);
                 await context.SaveChangesAsync();
             }
         }

@@ -10,7 +10,10 @@
     <None Remove="Views\Resource\Cursor\cat.ani" />
     <None Remove="Views\Resource\Icons\Login.ico" />
     <None Remove="Views\Resource\Icons\Password.ico" />
+    <None Remove="Views\Resource\Image\Add.png" />
     <None Remove="Views\Resource\Image\NewPage.png" />
+    <None Remove="Views\Resource\Image\Remove.png" />
+    <None Remove="Views\Resource\Image\Result.png" />
     <None Remove="Views\Resource\Image\Search.png" />
     <None Remove="Views\Resource\Image\User0.png" />
     <None Remove="Views\Resource\Image\User1.png" />
@@ -43,7 +46,10 @@
     <Resource Include="Views\Resource\Cursor\cat.ani" />
     <Resource Include="Views\Resource\Icons\Login.ico" />
     <Resource Include="Views\Resource\Icons\Password.ico" />
+    <Resource Include="Views\Resource\Image\Add.png" />
     <Resource Include="Views\Resource\Image\NewPage.png" />
+    <Resource Include="Views\Resource\Image\Remove.png" />
+    <Resource Include="Views\Resource\Image\Result.png" />
     <Resource Include="Views\Resource\Image\Search.png" />
     <Resource Include="Views\Resource\Image\User0.png" />
     <Resource Include="Views\Resource\Image\User1.png" />
