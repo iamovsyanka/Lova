@@ -38,6 +38,7 @@
                                 <StackPanel>
                                     <TextBlock Text="{Binding DiscussionName}" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" />
                                     <TextBlock Text="{Binding Text}" FontSize="14" TextWrapping="Wrap"/>
+                                    <TextBlock Text="Нажмите, чтобы выбрать обсуждение" Width="289" Height="22" HorizontalAlignment="Right"/>
                                     <StackPanel>
                                         <ListView ItemsSource="{Binding Messages}" Width="500" Height="153" >
                                             <ListView.ItemTemplate>
@@ -76,7 +77,7 @@
             </Image.ToolTip>
         </Image>
         <Button Grid.Column="1" Grid.Row="4" Content="Тесты" Command="{Binding GoToTestCommand}" Margin="0,54,0,0" VerticalAlignment="Top"/>
-        <Button Grid.Column="1" Grid.Row="4" Content="Добавить обсуждение" VerticalAlignment="Top" Command="{Binding AddDiscussionCommand}"/>
+        <Button Grid.Column="1" Grid.Row="4" Content="Администратор" VerticalAlignment="Top" Command="{Binding AddDiscussionCommand}" IsEnabled="{Binding Admin}"/>
         <Button Grid.Column="1" Grid.Row="4" Content="Калькулятор" VerticalAlignment="Top" Command="{Binding GoToCalculatorCommand}" HorizontalAlignment="Left" Margin="38,111,0,0"/>
     </Grid>
 </Page>

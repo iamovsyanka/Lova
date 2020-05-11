@@ -5,8 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="{Binding CurrentPage}" 
-        Height="450" 
-        Width="800"
+        WindowState="Maximized" ResizeMode="CanMinimize"
         WindowStartupLocation="CenterScreen">
     <Window.Background >
         <SolidColorBrush Color="#3B6BBB"/>

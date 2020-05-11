@@ -61,6 +61,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Forum\RemoveMessageView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Forum\RemoveMessageView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\AuthenticationView.xaml">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>

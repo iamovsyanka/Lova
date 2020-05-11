@@ -8,7 +8,7 @@ using System.Windows.Input;
 
 namespace Presentation.ViewModels
 {
-    public class RemoveDiscussionViewModel : ViewModelBase
+    public class RemoveMessageViewModel : ViewModelBase
     {
         private readonly UnitOfWork unitOfWork;
         private string discussionName;
@@ -20,7 +20,7 @@ namespace Presentation.ViewModels
         public ICommand GoToForumCommand => new RelayCommand(obj => GoToForum());
         public ICommand GoToTestCommand => new RelayCommand(obj => GoToTest());
 
-        public RemoveDiscussionViewModel()
+        public RemoveMessageViewModel()
         {
             unitOfWork = new UnitOfWork();
             discussions = new ObservableCollection<Discussion>(unitOfWork.DiscussionRepository.Get());

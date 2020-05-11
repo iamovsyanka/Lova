@@ -15,7 +15,6 @@ namespace Presentation.ViewModels
 
         public ICommand AddDiscussionCommand => new RelayCommand(obj => AddDiscussion());
         public ICommand RemoveDiscussionCommand => new RelayCommand(obj => GoToRemoveDiscussion());
-
         public ICommand GoToForumCommand => new RelayCommand(obj => GoToForum());
         public ICommand GoToTestCommand => new RelayCommand(obj => GoToTest());
 
