@@ -21,20 +21,23 @@
             <ColumnDefinition Width="249*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="34*"/>
-            <RowDefinition Height="55*"/>
-            <RowDefinition Height="57*"/>
-            <RowDefinition Height="127*"/>
-            <RowDefinition Height="177*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="56*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="128*"/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="35*"/>
         </Grid.RowDefinitions>
 
-        <Label Content="Форум" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
-        <Grid Grid.Row="1" Grid.RowSpan="4" Grid.Column="0">
+        <Label Content="Форум" Height="34" Width="68"/>
+        <Grid Grid.Row="1" Grid.RowSpan="7" Grid.Column="0">
             <ListView ItemsSource="{Binding Discussions}" SelectedItem="{Binding SelectedDiscussion}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>
-                            <Border BorderBrush="#8570E0" BorderThickness="1" Width="505">
+                            <Border BorderBrush="#8570E0" BorderThickness="1" Width="600">
                                 <StackPanel>
                                     <TextBlock Text="{Binding DiscussionName}" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" />
                                     <TextBlock Text="{Binding Text}" FontSize="14" TextWrapping="Wrap"/>
@@ -70,14 +73,14 @@
             </ListView>
         </Grid>
         <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding MessageText}" Margin="18,0,18,10" />
-        <Button Grid.Column="1" Grid.Row="2" Command="{Binding SendMessageCommand}" Content="Отправить сообщение"/>
+        <Button Grid.Column="1" Grid.Row="2" Command="{Binding SendMessageCommand}" Content="Отправить сообщение" Height="40" Width="170"/>
         <Image Grid.Row="3" Grid.Column="1" Source="..\Views\Resource\Image\NewPage.png">
             <Image.ToolTip >
                 <TextBlock Text="{Binding Tooltip}"/>
             </Image.ToolTip>
         </Image>
-        <Button Grid.Column="1" Grid.Row="4" Content="Тесты" Command="{Binding GoToTestCommand}" Margin="0,54,0,0" VerticalAlignment="Top"/>
-        <Button Grid.Column="1" Grid.Row="4" Content="Администратор" VerticalAlignment="Top" Command="{Binding AddDiscussionCommand}" IsEnabled="{Binding Admin}"/>
-        <Button Grid.Column="1" Grid.Row="4" Content="Калькулятор" VerticalAlignment="Top" Command="{Binding GoToCalculatorCommand}" HorizontalAlignment="Left" Margin="38,111,0,0"/>
+        <Button Grid.Column="1" Grid.Row="5" Content="Тесты" Command="{Binding GoToTestCommand}" Height="40"/>
+        <Button Grid.Column="1" Grid.Row="4" Content="Администратор" Command="{Binding AddDiscussionCommand}" Height="40"/>
+        <Button Grid.Column="1" Grid.Row="6" Content="Калькулятор" Command="{Binding GoToCalculatorCommand}" Height="40"/>
     </Grid>
 </Page>

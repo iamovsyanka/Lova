@@ -17,7 +17,6 @@ namespace Presentation.ViewModels
         private Question selectedQuestion;
         private string answer;
         private int countCorrectAnswers = 0;
-        private int countSaveAnswers = 0;
 
         public ICommand SaveAnswerCommand => new RelayCommand(obj => AddAnswer());
         public ICommand CheckTestCommand => new RelayCommand(obj => CheckTest());

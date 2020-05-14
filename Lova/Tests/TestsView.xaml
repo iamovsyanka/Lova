@@ -24,7 +24,10 @@
             <RowDefinition Height="60*"/>
             <RowDefinition Height="57*"/>
             <RowDefinition Height="127*"/>
-            <RowDefinition Height="177*"/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="35*"/>
         </Grid.RowDefinitions>
         <Label Grid.ColumnSpan="2" Content="Тесты" Height="31" Width="60"/>
         <Grid Grid.Row="1" Grid.RowSpan="4" Grid.Column="0">
@@ -55,12 +58,16 @@
         </Grid>
         <TextBox Grid.Column="1" Grid.Row="1" Text="{Binding TestName}" TextWrapping="Wrap" Width="140" Height="40"/>
         <Button Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Left" Margin="140,0,0,0" Width="39" Command="{Binding SearchTestCommand}" Height="40">
-            <Image Source="..\Views\Resource\Image\Search.png"/>
+            <Image Source="..\Views\Resource\Image\Search.png">
+                <Image.ToolTip >
+                    <TextBlock Text="Поиск по названию теста"/>
+                </Image.ToolTip>
+            </Image>
         </Button>
         <Button Grid.Column="1" Grid.Row="2" Content="Пройти тест" Command="{Binding GoToTestCommand}" Height="40" Width="170"/>
-        <Button Grid.Column="1" Grid.Row="4" Content="Форум" Command="{Binding GoToForumCommand}" VerticalAlignment="Top" Height="40" Width="170"/>
-        <Button Grid.Column="1" Grid.Row="4" Content="Результаты" Command="{Binding GoToUserTestCommand}" Margin="0,60,0,0" VerticalAlignment="Top" Height="40" Width="170"/>
-        <Button Grid.Column="1" Grid.Row="4" Content="Добавить тест" Command="{Binding AddTestCommand}" Margin="0,118,0,0" VerticalAlignment="Top" Height="40" Width="170"/>
+        <Button Grid.Column="1" Grid.Row="6" Content="Форум" Command="{Binding GoToForumCommand}" Height="40" Width="170"/>
+        <Button Grid.Column="1" Grid.Row="5" Content="Результаты" Command="{Binding GoToUserTestCommand}"  Height="40" Width="170"/>
+        <Button Grid.Column="1" Grid.Row="4" Content="Администратор" Command="{Binding AddTestCommand}" Height="40" Width="170"/>
         <Image Grid.Row="3" Grid.Column="1" Source="..\Views\Resource\Image\NewPage.png">
             <Image.ToolTip >
                 <TextBlock Text="{Binding Tooltip}"/>
