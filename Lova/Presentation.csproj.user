@@ -43,7 +43,7 @@
     <Compile Update="Tests\UserTestView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Forum\RemoveDiscussion.xaml.cs">
+    <Compile Update="Forum\RemoveDiscussionView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -58,6 +58,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Tests\AddQuestionsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Tests\RemoveTestView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Tests\UsersTestView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\AuthenticationView.xaml">
@@ -78,7 +84,7 @@
     <Page Update="Views\RegistrationView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Forum\RemoveDiscussion.xaml">
+    <Page Update="Forum\RemoveDiscussionView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Resource\Style\Calculator.xaml">

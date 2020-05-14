@@ -109,8 +109,16 @@ namespace Presentation.ViewModels
 
         private void GoToUserTest()
         {
-            App.UserTestPage = new Views.UserTestView();
-            App.ProfilViewModel.CurrentPage = App.UserTestPage;
+            if (unitOfWork.UserRepository.IsAdmin(CurrentUser.GetUserId()))
+            {
+                App.UsersTestPage= new Views.UsersTestView();
+                App.ProfilViewModel.CurrentPage = App.UsersTestPage;
+            }
+            else
+            {
+                App.UserTestPage = new Views.UserTestView();
+                App.ProfilViewModel.CurrentPage = App.UserTestPage;
+            }
         }
 
         private void SearchTest()

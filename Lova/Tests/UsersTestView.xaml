@@ -1,4 +1,4 @@
-﻿<Page x:Class="Presentation.Views.UserTestView"
+﻿<Page x:Class="Presentation.Views.UsersTestView"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -9,7 +9,7 @@
       Title="UserTest">
 
     <Page.DataContext>
-        <vm:UserTestViewModel/>
+        <vm:UsersTestViewModel/>
     </Page.DataContext>
     <Page.Resources>
         <ResourceDictionary Source="..\Views\Resource\Style\Test.xaml"/>
@@ -28,12 +28,13 @@
             <RowDefinition Height="100*"/>
         </Grid.RowDefinitions>
 
-        <Label Grid.ColumnSpan="2" Grid.Column="0" VerticalContentAlignment="Top" Content="Ваши результаты" HorizontalAlignment="Left" Margin="320,0,0,0" Height="43"/>
-        <DataGrid Grid.Row="1" Grid.RowSpan="3" ItemsSource="{Binding UserTests}" HorizontalAlignment="Center">
+        <Label Grid.ColumnSpan="3" Grid.Column="0" Content="Результаты студентов" Grid.Row="0" Height="25" VerticalContentAlignment="Top"/>
+        <DataGrid Grid.Column="0" Grid.Row="1" Grid.RowSpan="3" ItemsSource="{Binding UserTests}" HorizontalAlignment="Center">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding TestName}" Header="Название теста" IsReadOnly="True" Width="150"/>
                 <DataGridTextColumn Binding="{Binding Result}" Header="Результаты" IsReadOnly="True"/>
                 <DataGridTextColumn Binding="{Binding SolvedTime}" Header="Время прохождения" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding UserName}" Header="Пользователь" IsReadOnly="True"/>
             </DataGrid.Columns>
         </DataGrid>
         <Button Grid.Column="1" Grid.Row="2" Content="Форум" Command="{Binding GoToForumCommand}" Height="40" Width="170"/>

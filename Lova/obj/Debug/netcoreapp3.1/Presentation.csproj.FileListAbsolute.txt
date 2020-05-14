@@ -71,8 +71,6 @@ D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Tests\TestsView.baml
 D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Tests\UserTestView.baml
 D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Tests\AddQuestionsView.g.cs
 D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Tests\AddQuestionsView.baml
-D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Forum\RemoveDiscussion.g.cs
-D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Forum\RemoveDiscussion.baml
 D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Calculator\CalculatorView.g.cs
 D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Calculator\CalculatorView.baml
 D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Views\Resource\Style\Calculator.baml
@@ -82,3 +80,9 @@ D:\Курсач\Lova\Lova\bin\Debug\netcoreapp3.1\Calculator.dll
 D:\Курсач\Lova\Lova\bin\Debug\netcoreapp3.1\Calculator.pdb
 D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Forum\RemoveMessageView.g.cs
 D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Forum\RemoveMessageView.baml
+D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Forum\RemoveDiscussionView.g.cs
+D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Tests\RemoveTestView.g.cs
+D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Forum\RemoveDiscussionView.baml
+D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Tests\RemoveTestView.baml
+D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Tests\UsersTestView.g.cs
+D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Tests\UsersTestView.baml

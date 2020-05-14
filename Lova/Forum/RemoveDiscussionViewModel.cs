@@ -11,7 +11,6 @@ namespace Presentation.ViewModels
     public class RemoveDiscussionViewModel : ViewModelBase
     {
         private readonly UnitOfWork unitOfWork;
-        private string discussionName;
         private ObservableCollection<Discussion> discussions;
         private Discussion selectedDiscussion;
 
@@ -24,17 +23,7 @@ namespace Presentation.ViewModels
         {
             unitOfWork = new UnitOfWork();
             discussions = new ObservableCollection<Discussion>(unitOfWork.DiscussionRepository.Get());
-        }
-
-        public string DiscussionName
-        {
-            get => discussionName;
-            set
-            {
-                discussionName = value;
-                OnPropertyChanged("DiscussionName");
-            }
-        }   
+        }  
 
         public ObservableCollection<Discussion> Discussions
         {

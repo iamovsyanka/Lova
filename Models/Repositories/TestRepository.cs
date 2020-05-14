@@ -58,5 +58,15 @@ namespace Models.Repositories
             return test != null ? test.Name : "";
         }
 
+        public async Task RemoveByNameAsync(string testName)
+        {
+            var testToRemove = await Get().FirstOrDefaultAsync(t => t.Name == testName);
+
+            if (testToRemove != null)
+            {
+                context.Tests.Remove(testToRemove);
+                await context.SaveChangesAsync();
+            }
+        }
     }
 }

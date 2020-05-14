@@ -64,10 +64,22 @@
     <Compile Update="Forum\RemoveMessageView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Tests\RemoveTestView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Tests\UsersTestView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <Page Update="Forum\RemoveMessageView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Tests\RemoveTestView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Tests\UsersTestView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\AuthenticationView.xaml">

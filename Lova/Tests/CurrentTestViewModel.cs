@@ -4,6 +4,7 @@ using Models.Current;
 using Models.Models;
 using Models.UnitOfWork;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Input;
@@ -15,6 +16,7 @@ namespace Presentation.ViewModels
         private readonly UnitOfWork unitOfWork;
         private ObservableCollection<Question> questions;
         private Question selectedQuestion;
+        private string wrongAnswers;
         private string answer;
         private int countCorrectAnswers = 0;
 
@@ -26,7 +28,6 @@ namespace Presentation.ViewModels
         public CurrentTestViewModel()
         {
             unitOfWork = new UnitOfWork();
-
             questions = new ObservableCollection<Question>(unitOfWork.QuestionRepository.GetQuestionsByTestId(CurrentTest.GetTestId()));
         }
 
@@ -68,10 +69,15 @@ namespace Presentation.ViewModels
             {
                 if(answer != null)
                 {
-                    if(selectedQuestion.Answer == answer)
+                    if (selectedQuestion.Answer == answer)
                     {
                         countCorrectAnswers++;
                     }
+                    else
+                    {
+                        wrongAnswers += answer + "\n";
+                    }
+
                     Answer = null;
                 }
                 else
@@ -88,10 +94,15 @@ namespace Presentation.ViewModels
 
         private async void CheckTest()
         {
+            if(wrongAnswers != null)
+            {
+                MessageBox.Show($"Неправильные ответы: {wrongAnswers}");
+            }
             var newUserTest = new UserTest()
             {
                 TestName = unitOfWork.TestRepository.GetTestNameById(CurrentTest.GetTestId()),
                 UserId = CurrentUser.GetUserId(),
+                UserName = unitOfWork.UserRepository.GetUserNameById(CurrentUser.GetUserId()),
                 TestId = CurrentTest.GetTestId(),
                 Result = $"{countCorrectAnswers} / {questions.Count}",
                 SolvedTime = DateTime.Now

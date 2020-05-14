@@ -15,7 +15,9 @@ namespace Presentation.ViewModels
         private string testName;
         private string testDescription;
         private string testCategory;
+
         public ICommand AddTestCommand => new RelayCommand(obj => AddTest());
+        public ICommand RemoveTestCommand => new RelayCommand(obj => RemoveTest());
 
         public AddTestViewModel()
         {
@@ -74,6 +76,12 @@ namespace Presentation.ViewModels
             {
                 MessageBox.Show("Упс... Не все поля введены :(");
             }
+        }
+
+        private void RemoveTest()
+        {
+            App.RemoveTestViewPage = new Views.RemoveTestView();
+            App.ProfilViewModel.CurrentPage = App.RemoveTestViewPage;
         }
     }
 }

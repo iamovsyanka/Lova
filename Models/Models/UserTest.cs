@@ -17,6 +17,9 @@ namespace Models.Models
         public virtual User User { get; set; }
 
         [Required]
+        public virtual string UserName { get; set; }
+
+        [Required]
         [ForeignKey("Test")]
         public virtual int TestId { get; set; }
 

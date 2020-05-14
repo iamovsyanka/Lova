@@ -28,7 +28,8 @@
             <RowDefinition Height="79*"/>
             <RowDefinition Height="136*"/>
         </Grid.RowDefinitions>
-        <Label Grid.Row="0" Content="Тест" VerticalAlignment="Stretch" Grid.Column="1" Width="46" Margin="0,0,0,79" Grid.RowSpan="2"/>
+        
+        <Label Grid.Row="0" Content="Тест" Grid.Column="1"/>
         <TextBlock Grid.Row="1" Text="Название:" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding TestName}" Width="321" Margin="0,35,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="40" />
         <TextBlock Grid.Row="2" Text="Описание:" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center"/>
@@ -37,5 +38,6 @@
         <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding TestCategory}" Width="321" Margin="0,32,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="43" />
         <Button Grid.Row="4" Grid.Column="1" Content="Добавить тест" Width="254" Height="52" Command="{Binding AddTestCommand}"/>
         <Image Grid.Column="2" Grid.Row="1" Grid.RowSpan="2" Source="..\Views\Resource\Image\Add.png"/>
+        <Button Grid.Column="2" Grid.Row="4" Content="Удалить тест" Command="{Binding RemoveTestCommand}"/>
     </Grid>
 </Page>

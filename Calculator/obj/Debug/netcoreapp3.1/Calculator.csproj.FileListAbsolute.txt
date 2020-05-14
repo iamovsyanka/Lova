@@ -5,4 +5,3 @@ D:\Курсач\Lova\Calculator\obj\Debug\netcoreapp3.1\Calculator.AssemblyInfoI
 D:\Курсач\Lova\Calculator\obj\Debug\netcoreapp3.1\Calculator.AssemblyInfo.cs
 D:\Курсач\Lova\Calculator\obj\Debug\netcoreapp3.1\Calculator.dll
 D:\Курсач\Lova\Calculator\obj\Debug\netcoreapp3.1\Calculator.pdb
-D:\Курсач\Lova\Calculator\obj\Debug\netcoreapp3.1\Calculator.csprojAssemblyReference.cache

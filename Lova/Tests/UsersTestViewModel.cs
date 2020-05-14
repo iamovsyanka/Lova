@@ -8,7 +8,7 @@ using System.Windows.Input;
 
 namespace Presentation.ViewModels
 {
-    public class UserTestViewModel : ViewModelBase
+    public class UsersTestViewModel : ViewModelBase
     {
         private readonly UnitOfWork unitOfWork;
         private ObservableCollection<UserTest> userTests;
@@ -17,10 +17,10 @@ namespace Presentation.ViewModels
         public ICommand GoToTestCommand => new RelayCommand(obj => GoToTest());
         public ICommand GoToCalculatorCommand => new RelayCommand(obj => GoToCalculator());
 
-        public UserTestViewModel()
+        public UsersTestViewModel()
         {
             unitOfWork = new UnitOfWork();
-            userTests = new ObservableCollection<UserTest>(unitOfWork.UserTestRepository.GetUserTestByUserId(CurrentUser.GetUserId()));
+            userTests = new ObservableCollection<UserTest>(unitOfWork.UserTestRepository.Get());
         }
 
         public ObservableCollection<UserTest> UserTests 
@@ -44,6 +44,7 @@ namespace Presentation.ViewModels
             App.TestsPage = new Views.TestsView();
             App.ProfilViewModel.CurrentPage = App.TestsPage;
         }
+
         private void GoToCalculator()
         {
             App.CalculatorViewPage = new Views.CalculatorView();
