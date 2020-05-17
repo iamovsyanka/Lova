@@ -3,10 +3,10 @@ using System.Windows.Controls;
 
 namespace Presentation.Views
 {
-    public partial class RegistrationView : Page
+    public partial class LoginView : Page
     {
-        public RegistrationView()
-        {            
+        public LoginView()
+        {
             InitializeComponent();
         }
 
@@ -15,13 +15,6 @@ namespace Presentation.Views
             if (DataContext != null)
                 if (DataContext != null)
                 { ((dynamic)DataContext).Password = ((PasswordBox)sender).Password; }
-        }
-
-        private void confirmedPassword_PasswordChanged(object sender, RoutedEventArgs e)
-        {
-            if (DataContext != null)
-                if (DataContext != null)
-                { ((dynamic)DataContext).ConfirmedPassword = ((PasswordBox)sender).Password; }
         }
     }
 }

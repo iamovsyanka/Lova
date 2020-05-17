@@ -139,8 +139,8 @@ namespace Presentation.ViewModels
         {
             if(unitOfWork.UserRepository.IsAdmin(CurrentUser.GetUserId()))
             {
-                App.AddDiscussionViewPage= new Views.AddDiscussionView();
-                App.ProfilViewModel.CurrentPage = App.AddDiscussionViewPage;
+                App.AddDiscussionPage= new Views.AddDiscussionView();
+                App.ProfilViewModel.CurrentPage = App.AddDiscussionPage;
             }
             else
             {
@@ -155,8 +155,8 @@ namespace Presentation.ViewModels
 
         private void GoToCalculator()
         {
-            App.CalculatorViewPage = new Views.CalculatorView();
-            App.ProfilViewModel.CurrentPage = App.CalculatorViewPage;
+            App.CalculatorPage = new Views.CalculatorView();
+            App.ProfilViewModel.CurrentPage = App.CalculatorPage;
         }
     }
 }

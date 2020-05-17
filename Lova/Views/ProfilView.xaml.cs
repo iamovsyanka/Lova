@@ -18,7 +18,7 @@ namespace Presentation.Views
             Cursor = customCursor;
 
             DataContext = App.ProfilViewModel;
-            App.ProfilViewModel.CurrentPage = App.ForumPage;
+            App.ProfilViewModel.CurrentPage = App.LoginPage;
         }
     }
 }

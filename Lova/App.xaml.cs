@@ -7,6 +7,8 @@ namespace Lova
     public partial class App : Application
     {
         public static ProfilViewModel ProfilViewModel { get; set; } = new ProfilViewModel();
+        public static LoginViewModel LoginViewModel { get; set; } = new LoginViewModel();
+        public static RegistrationViewModel RegistrationViewModel { get; set; } = new RegistrationViewModel();
         public static TestsViewModel TestsViewModel { get; set; } = new TestsViewModel();
         public static ForumViewModel ForumViewModel { get; set; } = new ForumViewModel();
         public static CurrentTestViewModel CurrentTestViewModel { get; set; } = new CurrentTestViewModel();
@@ -21,18 +23,20 @@ namespace Lova
         public static CalculatorViewModel CalculatorViewModel { get; set; } = new CalculatorViewModel();
         public static LevensteinViewModel LevensteinViewModel { get; set; } = new LevensteinViewModel();
 
+        public static LoginView LoginPage = new LoginView();
+        public static RegistrationView RegistrationPage = new RegistrationView();
         public static ForumView ForumPage = new ForumView();
         public static TestsView TestsPage = new TestsView();
         public static CurrentTestView CurrentTestPage = new CurrentTestView();
         public static UserTestView UserTestPage = new UserTestView();
         public static UsersTestView UsersTestPage = new UsersTestView();
-        public static AddDiscussionView AddDiscussionViewPage = new AddDiscussionView();
-        public static RemoveDiscussionView RemoveDiscussionViewPage = new RemoveDiscussionView();
-        public static RemoveMessageView RemoveMessageViewPage = new RemoveMessageView();
-        public static RemoveTestView RemoveTestViewPage = new RemoveTestView();
-        public static AddTestView AddTestViewPage = new AddTestView();
-        public static AddQuestionsView AddQuestionsViewPage = new AddQuestionsView();
-        public static CalculatorView CalculatorViewPage = new CalculatorView();
-        public static LevensteinView LevensteinViewPage = new LevensteinView();
+        public static AddDiscussionView AddDiscussionPage = new AddDiscussionView();
+        public static RemoveDiscussionView RemoveDiscussionPage = new RemoveDiscussionView();
+        public static RemoveMessageView RemoveMessagePage = new RemoveMessageView();
+        public static RemoveTestView RemoveTestPage = new RemoveTestView();
+        public static AddTestView AddTestPage = new AddTestView();
+        public static AddQuestionsView AddQuestionsPage = new AddQuestionsView();
+        public static CalculatorView CalculatorPage = new CalculatorView();
+        public static LevensteinView LevensteinPage = new LevensteinView();
     }
 }

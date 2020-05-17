@@ -79,8 +79,8 @@ namespace Presentation.ViewModels
 
         private void GoToRemoveDiscussion()
         {
-            App.RemoveDiscussionViewPage = new Views.RemoveDiscussionView();
-            App.ProfilViewModel.CurrentPage = App.RemoveDiscussionViewPage;
+            App.RemoveDiscussionPage = new Views.RemoveDiscussionView();
+            App.ProfilViewModel.CurrentPage = App.RemoveDiscussionPage;
         }
     }
 }

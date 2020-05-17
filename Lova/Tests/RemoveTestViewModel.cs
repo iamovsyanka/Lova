@@ -53,8 +53,8 @@ namespace Presentation.ViewModels
 
                 MessageBox.Show("Тест удалён :)");
 
-                App.RemoveTestViewPage = new Views.RemoveTestView();
-                App.ProfilViewModel.CurrentPage = App.RemoveTestViewPage;
+                App.RemoveTestPage = new Views.RemoveTestView();
+                App.ProfilViewModel.CurrentPage = App.RemoveTestPage;
             }
             else
             {
@@ -76,8 +76,8 @@ namespace Presentation.ViewModels
 
         private void GoToAddTest()
         {
-            App.AddTestViewPage = new Views.AddTestView();
-            App.ProfilViewModel.CurrentPage = App.AddTestViewPage;
+            App.AddTestPage = new Views.AddTestView();
+            App.ProfilViewModel.CurrentPage = App.AddTestPage;
         }
     }
 }

@@ -1,7 +1,9 @@
-﻿using Models.Commands;
+﻿using Lova;
+using Models.Commands;
 using Models.Models;
 using Models.UnitOfWork;
 using Models.Validation;
+using Presentation.Views;
 using System;
 using System.Linq;
 using System.Windows;
@@ -17,6 +19,7 @@ namespace Presentation.ViewModels
         private string confirmedPassword;
 
         public ICommand SignUpCommand => new RelayCommand(obj => SignUp());
+        public ICommand GoToLoginCommand => new RelayCommand(obj => GoToLogin());
 
         public RegistrationViewModel()
         {
@@ -53,52 +56,6 @@ namespace Presentation.ViewModels
             }
         }
 
-        private async void SignUp()
-        {
-            if (unitOfWork.UserRepository.Get().FirstOrDefault(user => user.UserName == UserName) != null)
-            {
-                MessageBox.Show("Упс... Пользователь с таким именем уже существует :)");
-                return;
-            }
-
-            if (CheckField())
-            {
-                var newUser = new User()
-                {
-                    UserName = userName,
-                    Password = Validation.GetHashString(password),
-                    Role = Models.Enums.Role.User
-                };
-                await unitOfWork.UserRepository.AddAsync(newUser);                   
-            }
-        }
-
-        private bool CheckField()
-        {
-            if (!Validation.regexLogin.IsMatch(UserName))
-            {
-                MessageBox.Show("Логин может содержать только цифры и буквы :)");
-                return false;
-            }
-
-            else if (!Validation.regexPassword.IsMatch(Password) || Password.Length < 6)
-            {
-                MessageBox.Show("Пароль может содержать только цифры и буквы латинского алфавита :)");
-                return false;
-            }
-
-            else if (Password != ConfirmedPassword)
-            {
-                MessageBox.Show("Пароли не совпадают, попробуйте ещё :)");
-                return false;
-            }
-
-            else
-            {
-                return true;
-            }
-        }
-
         public string Img
         {
             get
@@ -122,6 +79,75 @@ namespace Presentation.ViewModels
                         return "..\\Views\\Resource\\Image\\User0.png";
                 }
             }
+        }
+
+        private async void SignUp()
+        {
+            if (unitOfWork.UserRepository.Get().FirstOrDefault(user => user.UserName == UserName) != null)
+            {
+                MessageBox.Show("Упс... Пользователь с таким именем уже существует :)");
+                return;
+            }
+
+            if (CheckField())
+            {
+                var newUser = new User()
+                {
+                    UserName = userName,
+                    Password = Validation.GetHashString(password),
+                    Role = Models.Enums.Role.User
+                };
+                await unitOfWork.UserRepository.AddAsync(newUser);
+
+                MessageBox.Show("Регистрация прошла успешно! :)\nДля дальнейшей работы авторизируйтесь");
+
+                App.LoginPage = new LoginView();
+                App.ProfilViewModel.CurrentPage = App.LoginPage;
+            }
+        }
+
+        private bool CheckField()
+        {
+            if (!Validation.regexLogin.IsMatch(UserName))
+            {
+                MessageBox.Show("Логин может содержать только цифры и буквы :)");
+                return false;
+            }
+
+            else if(UserName.Length < 4)
+            {
+                MessageBox.Show("Логин должен содержать более 4 символов :)");
+                return false;
+            }
+
+            else if (!Validation.regexPassword.IsMatch(Password))
+            {
+                MessageBox.Show("Пароль может содержать только цифры и буквы латинского алфавита :)");
+                return false;
+            }
+
+            else if (Password.Length < 6)
+            {
+                MessageBox.Show("Пароль должен содержать более 6 символов :)");
+                return false;
+            }
+
+            else if (Password != ConfirmedPassword)
+            {
+                MessageBox.Show("Пароли не совпадают, попробуйте ещё :)");
+                return false;
+            }
+
+            else
+            {
+                return true;
+            }
+        }
+
+        private void GoToLogin()
+        {
+            App.LoginPage = new LoginView();
+            App.ProfilViewModel.CurrentPage = App.LoginPage;
         }
     }
 }

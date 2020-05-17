@@ -47,8 +47,8 @@ namespace Presentation.ViewModels
 
         private void GoToCalculator()
         {
-            App.CalculatorViewPage = new Views.CalculatorView();
-            App.ProfilViewModel.CurrentPage = App.CalculatorViewPage;
+            App.CalculatorPage = new Views.CalculatorView();
+            App.ProfilViewModel.CurrentPage = App.CalculatorPage;
         }
     }
 }

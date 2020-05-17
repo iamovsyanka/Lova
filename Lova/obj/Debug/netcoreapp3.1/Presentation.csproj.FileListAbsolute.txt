@@ -42,14 +42,12 @@ D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Views\Resource\Style\Forum.bam
 D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Views\Resource\Style\StartWindow.baml
 D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Views\Resource\Style\Test.baml
 D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\App.baml
-D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Views\AuthenticationView.g.cs
 D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Views\ProfilView.g.cs
 D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Views\RegistrationView.g.cs
 D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\App.g.cs
 D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
 D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Presentation_MarkupCompile.cache
 D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Presentation_MarkupCompile.lref
-D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Views\AuthenticationView.baml
 D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Views\RegistrationView.baml
 D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Presentation.g.resources
 D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Presentation.AssemblyInfoInputs.cache
@@ -86,3 +84,5 @@ D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Forum\RemoveDiscussionView.bam
 D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Tests\RemoveTestView.baml
 D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Tests\UsersTestView.g.cs
 D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Tests\UsersTestView.baml
+D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Views\LoginView.g.cs
+D:\Курсач\Lova\Lova\obj\Debug\netcoreapp3.1\Views\LoginView.baml

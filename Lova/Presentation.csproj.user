@@ -16,7 +16,7 @@
     <Compile Update="Tests\AddQuestionsView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\AuthenticationView.xaml.cs">
+    <Compile Update="Views\LoginView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Forum\ForumView.xaml.cs">
@@ -66,7 +66,7 @@
     <Page Update="Tests\UsersTestView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\AuthenticationView.xaml">
+    <Page Update="Views\LoginView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Forum\ForumView.xaml">

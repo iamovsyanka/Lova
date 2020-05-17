@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" 
         Height="500" Width="900"
-        Title="{Binding CurrentPage}" 
+        Title="Lova" 
         ResizeMode="CanMinimize"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen" Icon="Resource/Icons/Lova.ico">
     <Window.Background >
         <SolidColorBrush Color="#3B6BBB"/>
     </Window.Background>

@@ -12,8 +12,8 @@ namespace Presentation.ViewModels
 
         private void GoToLevenstein()
         {
-            App.LevensteinViewPage = new Views.LevensteinView();
-            App.ProfilViewModel.CurrentPage = App.LevensteinViewPage;
+            App.LevensteinPage = new Views.LevensteinView();
+            App.ProfilViewModel.CurrentPage = App.LevensteinPage;
         }
 
         private void GoToForum()

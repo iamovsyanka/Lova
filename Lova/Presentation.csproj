@@ -9,6 +9,7 @@
   <ItemGroup>
     <None Remove="Views\Resource\Cursor\cat.ani" />
     <None Remove="Views\Resource\Icons\Login.ico" />
+    <None Remove="Views\Resource\Icons\Lova.ico" />
     <None Remove="Views\Resource\Icons\Password.ico" />
     <None Remove="Views\Resource\Image\Add.png" />
     <None Remove="Views\Resource\Image\NewPage.png" />
@@ -46,6 +47,7 @@
   <ItemGroup>
     <Resource Include="Views\Resource\Cursor\cat.ani" />
     <Resource Include="Views\Resource\Icons\Login.ico" />
+    <Resource Include="Views\Resource\Icons\Lova.ico" />
     <Resource Include="Views\Resource\Icons\Password.ico" />
     <Resource Include="Views\Resource\Image\Add.png" />
     <Resource Include="Views\Resource\Image\NewPage.png" />
@@ -82,7 +84,7 @@
     <Page Update="Tests\UsersTestView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\AuthenticationView.xaml">
+    <Page Update="Views\LoginView.xaml">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>
     <Page Update="Views\RegistrationView.xaml">

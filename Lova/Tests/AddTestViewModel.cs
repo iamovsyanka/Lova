@@ -69,8 +69,8 @@ namespace Presentation.ViewModels
 
                 CurrentTest.SetTestId(unitOfWork.TestRepository.Get().FirstOrDefault(t => t.Name == testName).TestId);
 
-                App.AddQuestionsViewPage = new Views.AddQuestionsView();
-                App.ProfilViewModel.CurrentPage = App.AddQuestionsViewPage;
+                App.AddQuestionsPage = new Views.AddQuestionsView();
+                App.ProfilViewModel.CurrentPage = App.AddQuestionsPage;
             }
             else
             {
@@ -80,8 +80,8 @@ namespace Presentation.ViewModels
 
         private void RemoveTest()
         {
-            App.RemoveTestViewPage = new Views.RemoveTestView();
-            App.ProfilViewModel.CurrentPage = App.RemoveTestViewPage;
+            App.RemoveTestPage = new Views.RemoveTestView();
+            App.ProfilViewModel.CurrentPage = App.RemoveTestPage;
         }
     }
 }

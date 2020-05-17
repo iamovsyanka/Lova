@@ -1,4 +1,5 @@
-﻿using Models.Commands;
+﻿using Lova;
+using Models.Commands;
 using Models.Current;
 using Models.UnitOfWork;
 using Models.Validation;
@@ -10,15 +11,16 @@ using System.Windows.Input;
 
 namespace Presentation.ViewModels
 {
-    public class AuthenticationViewModel : ViewModelBase
+    public class LoginViewModel : ViewModelBase
     {
         private readonly UnitOfWork unitOfWork;
         private string userName;
         private string password;
 
         public ICommand LoginCommand => new RelayCommand(obj => Login());
+        public ICommand GoToRegistrationCommand => new RelayCommand(obj => GoToRegistration());
 
-        public AuthenticationViewModel()
+        public LoginViewModel()
         {
             unitOfWork = new UnitOfWork();
         }
@@ -77,8 +79,8 @@ namespace Presentation.ViewModels
                 {
                     CurrentUser.SetUserId(currentUser.Id);
 
-                    var profil = new ProfilView();
-                    profil.ShowDialog();                   
+                    App.ForumPage = new ForumView();
+                    App.ProfilViewModel.CurrentPage = App.ForumPage;
                 }
                 else
                 {
@@ -89,6 +91,12 @@ namespace Presentation.ViewModels
             {
                 MessageBox.Show("Такого пользователя не существует или логин введен с ошибкой, попробуйте ещё раз :)");
             }
+        }
+
+        private void GoToRegistration()
+        {
+            App.RegistrationPage = new RegistrationView();
+            App.ProfilViewModel.CurrentPage = App.RegistrationPage;
         }
     }
 }

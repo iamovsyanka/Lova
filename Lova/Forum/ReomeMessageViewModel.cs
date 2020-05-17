@@ -64,8 +64,8 @@ namespace Presentation.ViewModels
 
                 MessageBox.Show("Обсуждение удалено :)");
 
-                App.RemoveDiscussionViewPage = new Views.RemoveDiscussionView();
-                App.ProfilViewModel.CurrentPage = App.RemoveDiscussionViewPage;
+                App.RemoveDiscussionPage = new Views.RemoveDiscussionView();
+                App.ProfilViewModel.CurrentPage = App.RemoveDiscussionPage;
             }
             else
             {
@@ -87,8 +87,8 @@ namespace Presentation.ViewModels
 
         private void GoToAddDiscussion()
         {
-            App.AddDiscussionViewPage = new Views.AddDiscussionView();
-            App.ProfilViewModel.CurrentPage = App.AddDiscussionViewPage;
+            App.AddDiscussionPage = new Views.AddDiscussionView();
+            App.ProfilViewModel.CurrentPage = App.AddDiscussionPage;
         }
     }
 }

@@ -154,8 +154,8 @@ namespace Presentation.ViewModels
         {
             if (unitOfWork.UserRepository.IsAdmin(CurrentUser.GetUserId()))
             {
-                App.AddTestViewPage = new Views.AddTestView();
-                App.ProfilViewModel.CurrentPage = App.AddTestViewPage;
+                App.AddTestPage = new Views.AddTestView();
+                App.ProfilViewModel.CurrentPage = App.AddTestPage;
             }
             else
             {

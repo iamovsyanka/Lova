@@ -23,6 +23,5 @@ namespace Models.Validation
 
             return new Guid(hash);
         }
-
     }
 }
