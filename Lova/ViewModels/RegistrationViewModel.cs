@@ -5,13 +5,14 @@ using Models.UnitOfWork;
 using Models.Validation;
 using Presentation.Views;
 using System;
+using System.ComponentModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 
 namespace Presentation.ViewModels
 {
-    public class RegistrationViewModel : ViewModelBase
+    public class RegistrationViewModel : ViewModelBase, IDataErrorInfo
     {
         private readonly UnitOfWork unitOfWork;
         private string userName;
@@ -31,7 +32,11 @@ namespace Presentation.ViewModels
             get => userName;
             set
             {
-                userName = value;
+                if (userName != null)
+                {
+                    userName = value;
+                }
+
                 OnPropertyChanged("UserName");
             }
         }
@@ -81,6 +86,10 @@ namespace Presentation.ViewModels
             }
         }
 
+        public string Error => throw new NotImplementedException();
+
+        public string this[string columnName] => throw new NotImplementedException();
+
         private async void SignUp()
         {
             if (unitOfWork.UserRepository.Get().FirstOrDefault(user => user.UserName == UserName) != null)
@@ -107,16 +116,16 @@ namespace Presentation.ViewModels
         }
 
         private bool CheckField()
-        {
-            if (!Validation.regexLogin.IsMatch(UserName))
+        {  
+            if(userName.Length < 4)
             {
-                MessageBox.Show("Логин может содержать только цифры и буквы :)");
+                MessageBox.Show("Логин должен содержать более 4 символов :)");
                 return false;
             }
 
-            else if(UserName.Length < 4)
+            else if (!Validation.regexLogin.IsMatch(userName))
             {
-                MessageBox.Show("Логин должен содержать более 4 символов :)");
+                MessageBox.Show("Логин может содержать только цифры и буквы :)");
                 return false;
             }
 
