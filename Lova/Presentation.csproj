@@ -12,6 +12,7 @@
     <None Remove="Views\Resource\Icons\Lova.ico" />
     <None Remove="Views\Resource\Icons\Password.ico" />
     <None Remove="Views\Resource\Image\Add.png" />
+    <None Remove="Views\Resource\Image\Calculator.png" />
     <None Remove="Views\Resource\Image\NewPage.png" />
     <None Remove="Views\Resource\Image\Remove.png" />
     <None Remove="Views\Resource\Image\Result.png" />
@@ -50,6 +51,7 @@
     <Resource Include="Views\Resource\Icons\Lova.ico" />
     <Resource Include="Views\Resource\Icons\Password.ico" />
     <Resource Include="Views\Resource\Image\Add.png" />
+    <Resource Include="Views\Resource\Image\Calculator.png" />
     <Resource Include="Views\Resource\Image\NewPage.png" />
     <Resource Include="Views\Resource\Image\Remove.png" />
     <Resource Include="Views\Resource\Image\Result.png" />

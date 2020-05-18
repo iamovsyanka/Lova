@@ -86,6 +86,7 @@ namespace Presentation.ViewModels
                 {
                     MessageBox.Show("Пароль введен с ошибкой, попробуйте ещё раз :)");
                 }
+                
             }
             else
             {

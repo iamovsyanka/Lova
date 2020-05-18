@@ -1,4 +1,5 @@
-﻿using Presentation.ViewModels;
+﻿using Calculator;
+using Presentation.ViewModels;
 using Presentation.Views;
 using System.Windows;
 

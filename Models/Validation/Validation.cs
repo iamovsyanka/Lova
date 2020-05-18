@@ -23,14 +23,5 @@ namespace Models.Validation
 
             return new Guid(hash);
         }
-
-        public static bool CheckLogin(string userName)
-        {
-            if (userName.Length < 4)
-            {
-
-            }
-            return true;
-        }
     }
 }

@@ -114,19 +114,26 @@ namespace Presentation.ViewModels
         private async void SendMessage()
         {
             if(selectedDiscussion != null)
-            { 
-                var message = new Message()
+            {
+                if (messageText != null) 
                 {
-                    DiscussionId = selectedDiscussion.DiscussionId,
-                    Text = messageText,
-                    UserId = CurrentUser.GetUserId(),
-                    UserName = unitOfWork.UserRepository.GetUserNameById(CurrentUser.GetUserId()),
-                    When = DateTime.Now
-                };
-                await unitOfWork.MessageRepository.AddAsync(message);
+                    var message = new Message()
+                    {
+                        DiscussionId = selectedDiscussion.DiscussionId,
+                        Text = messageText,
+                        UserId = CurrentUser.GetUserId(),
+                        UserName = unitOfWork.UserRepository.GetUserNameById(CurrentUser.GetUserId()),
+                        When = DateTime.Now
+                    };
+                    await unitOfWork.MessageRepository.AddAsync(message);
 
-                App.ForumPage = new Views.ForumView();
-                App.ProfilViewModel.CurrentPage = App.ForumPage;
+                    App.ForumPage = new Views.ForumView();
+                    App.ProfilViewModel.CurrentPage = App.ForumPage;
+                }
+                else
+                {
+                    MessageBox.Show("Упс... А вы не ввели сообщение :)");
+                }
             }
             else 
             {
@@ -147,6 +154,7 @@ namespace Presentation.ViewModels
                 MessageBox.Show("Извините, эта функции доступна только для администратора");
             }
         }   
+
         private void GoToTest()
         {
             App.TestsPage = new Views.TestsView();

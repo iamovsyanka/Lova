@@ -41,7 +41,7 @@
                                 <StackPanel>
                                     <TextBlock Text="{Binding DiscussionName}" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" />
                                     <TextBlock Text="{Binding Text}" FontSize="14" TextWrapping="Wrap"/>
-                                    <TextBlock Text="Нажмите, чтобы выбрать обсуждение" Width="289" Height="22" HorizontalAlignment="Right"/>
+                                    <TextBlock Text="Нажмите ❤, чтобы выбрать обсуждение" Width="289" Height="22" HorizontalAlignment="Right"/>
                                     <StackPanel>
                                         <ListView ItemsSource="{Binding Messages}" Width="500" Height="153" >
                                             <ListView.ItemTemplate>

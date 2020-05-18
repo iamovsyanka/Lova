@@ -12,7 +12,7 @@ using System.Windows.Input;
 
 namespace Presentation.ViewModels
 {
-    public class RegistrationViewModel : ViewModelBase, IDataErrorInfo
+    public class RegistrationViewModel : ViewModelBase
     {
         private readonly UnitOfWork unitOfWork;
         private string userName;
@@ -85,10 +85,6 @@ namespace Presentation.ViewModels
                 }
             }
         }
-
-        public string Error => throw new NotImplementedException();
-
-        public string this[string columnName] => throw new NotImplementedException();
 
         private async void SignUp()
         {

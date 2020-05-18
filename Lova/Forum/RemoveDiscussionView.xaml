@@ -32,7 +32,7 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
-                        <Border BorderBrush="#8570E0" BorderThickness="1" Width="505">
+                        <Border BorderBrush="#8570E0" BorderThickness="1" Width="550">
                             <StackPanel>
                                 <TextBlock Text="{Binding DiscussionName}" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" />
                                 <TextBlock Text="{Binding Text}" FontSize="14" TextWrapping="Wrap"/>

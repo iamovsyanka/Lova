@@ -15,6 +15,8 @@ namespace Presentation.ViewModels
 
         public ICommand AddDiscussionCommand => new RelayCommand(obj => AddDiscussion());
         public ICommand RemoveDiscussionCommand => new RelayCommand(obj => GoToRemoveDiscussion());
+        public ICommand RemoveMessageCommand => new RelayCommand(obj => GoToRemoveMessage());
+
         public ICommand GoToForumCommand => new RelayCommand(obj => GoToForum());
         public ICommand GoToTestCommand => new RelayCommand(obj => GoToTest());
 
@@ -81,6 +83,12 @@ namespace Presentation.ViewModels
         {
             App.RemoveDiscussionPage = new Views.RemoveDiscussionView();
             App.ProfilViewModel.CurrentPage = App.RemoveDiscussionPage;
+        }
+
+        private void GoToRemoveMessage()
+        {
+            App.RemoveMessagePage = new Views.RemoveMessageView();
+            App.ProfilViewModel.CurrentPage = App.RemoveMessagePage;
         }
     }
 }

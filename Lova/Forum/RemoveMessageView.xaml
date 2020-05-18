@@ -9,7 +9,7 @@
       Title="AdminView">
 
     <Page.DataContext>
-        <vm:RemoveTestViewModel/>
+        <vm:RemoveMessageViewModel/>
     </Page.DataContext>
     <Page.Resources>
         <ResourceDictionary Source="..\Views\Resource\Style\Forum.xaml"/>
@@ -28,25 +28,25 @@
             <RowDefinition Height="187*"/>
         </Grid.RowDefinitions>
 
-        <ListView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2" ItemsSource="{Binding Discussions}" SelectedItem="{Binding SelectedDiscussion}">
+        <ListView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2" ItemsSource="{Binding Messages}" SelectedItem="{Binding SelectedMessage}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
                         <Border BorderBrush="#8570E0" BorderThickness="1" Width="505">
                             <StackPanel>
-                                <TextBlock Text="{Binding DiscussionName}" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" />
-                                <TextBlock Text="{Binding Text}" FontSize="14" TextWrapping="Wrap"/>
+                                <TextBlock Text="{Binding UserName}" FontSize="14" TextWrapping="Wrap"/>
+                                <TextBlock Text="{Binding Text}" FontWeight="Bold" FontSize="16"/>
+                                <TextBlock Text="{Binding When}" FontSize="14" TextWrapping="Wrap"/>
                             </StackPanel>
                         </Border>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Label Grid.Row="0" Grid.ColumnSpan="3" Content="Обсуждение" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-        <Image Grid.Column="2" Grid.Row="1" Source="..\Views\Resource\Image\Remove.png"/>
-        <Button Grid.Row="3" Grid.ColumnSpan="2" Content="Удалить обсуждение" Width="254" Height="51" Command="{Binding RemoveDiscussionCommand}"/>
+        <Label Grid.Row="0" Grid.ColumnSpan="3" Content="Сообщения"/>
+        <Image Grid.Column="2" Grid.Row="1" Grid.RowSpan="2" Source="..\Views\Resource\Image\Remove.png"/>
+        <Button Grid.Row="3" Grid.ColumnSpan="2" Content="Удалить сообщение" Width="254" Height="51" Command="{Binding RemoveMessageCommand}"/>
         <Button Grid.Column="2" Grid.Row="3" Content="Тесты" Command="{Binding GoToTestCommand}" Margin="0,100,0,0" VerticalAlignment="Top" Height="40" Width="170"/>
         <Button Grid.Column="2" Grid.Row="3" Content="Форум" Command="{Binding GoToForumCommand}" Margin="0,24,0,0" VerticalAlignment="Top" Height="40" Width="170"/>
-        <Button Grid.Column="2" Grid.Row="2" Content="Добавить обсуждение" Command="{Binding AddDiscussionCommand}" Margin="0,24,0,0" VerticalAlignment="Top" Height="40" Width="170"/>
     </Grid>
 </Page>

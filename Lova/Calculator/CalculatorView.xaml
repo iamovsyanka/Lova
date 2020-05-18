@@ -26,10 +26,48 @@
             <RowDefinition Height="96*"/>
             <RowDefinition Height="112*"/>
         </Grid.RowDefinitions>
-        
+        <Image Grid.Column="2" Grid.Row="1" Source="..\Views\Resource\Image\Calculator.png"/>
         <Button Grid.Column="1" Grid.Row="1" Content="Дистанция Левенштейна" Command="{Binding GoToLevensteinCommand}" Width="195"/>
         <Button Grid.Column="2" Grid.Row="2" Content="Форум" Command="{Binding GoToForumCommand}" Margin="0,129,0,0" VerticalAlignment="Top"/>
         <Button Grid.Column="2" Grid.Row="2" Content="Тесты" Command="{Binding GoToTestCommand}" Margin="0,47,0,0" VerticalAlignment="Top"/>
 
+        <Grid Grid.Row="1" Grid.RowSpan="2" Grid.Column="0" Background="#7FDACD" Margin="50 50 50 50">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.ColumnSpan="4" TextAlignment="Right" FontSize="24" Padding="0,10,10,0" Text = "{Binding Display}"/>
+
+            <Button Grid.Row="1" Grid.Column="0" Command="{Binding NumberCommand}" CommandParameter="7" Height="50" Width="50">7</Button>
+            <Button Grid.Row="1" Grid.Column="1" Command="{Binding NumberCommand}" CommandParameter="8" Height="50" Width="50">8</Button>
+            <Button Grid.Row="1" Grid.Column="2" Command="{Binding NumberCommand}" CommandParameter="9" Height="50" Width="50">9</Button>
+            <Button Grid.Row="1" Grid.Column="3" Command="{Binding PlusCommand}" Height="50" Width="50">+</Button>
+
+            <Button Grid.Row="2" Grid.Column="0" Command="{Binding NumberCommand}" CommandParameter="4" Height="50" Width="50">4</Button>
+            <Button Grid.Row="2" Grid.Column="1" Command="{Binding NumberCommand}" CommandParameter="5" Height="50" Width="50">5</Button>
+            <Button Grid.Row="2" Grid.Column="2" Command="{Binding NumberCommand}" CommandParameter="6" Height="50" Width="50">6</Button>
+            <Button Grid.Row="2" Grid.Column="3" Command="{Binding MinusCommand}" Height="50" Width="50">-</Button>
+
+            <Button Grid.Row="3" Grid.Column="0" Command="{Binding NumberCommand}" CommandParameter="1" Height="50" Width="50">1</Button>
+            <Button Grid.Row="3" Grid.Column="1" Command="{Binding NumberCommand}" CommandParameter="2" Height="50" Width="50">2</Button>
+            <Button Grid.Row="3" Grid.Column="2" Command="{Binding NumberCommand}" CommandParameter="3" Height="50" Width="50">3</Button>
+            <Button Grid.Row="3" Grid.Column="3" Command="{Binding TimesCommand}" Height="50" Width="50">*</Button>
+
+            <Button Grid.Row="4" Grid.Column="0" Command="{Binding NumberCommand}" CommandParameter="0" Height="50" Width="50">0</Button>
+            <Button Grid.Row="4" Grid.Column="1" Command="{Binding ClearCommand}" Height="50" Width="50">C</Button>
+            <Button Grid.Row="4" Grid.Column="2" Command="{Binding EqualsCommand}" Height="50" Width="50">=</Button>
+            <Button Grid.Row="4" Grid.Column="3" Command="{Binding OverCommand}" Height="50" Width="50">/</Button>
+        </Grid>
     </Grid>
 </Page>
