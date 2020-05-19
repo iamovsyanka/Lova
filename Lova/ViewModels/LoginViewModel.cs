@@ -72,25 +72,31 @@ namespace Presentation.ViewModels
 
         private void Login()
         {
-            var currentUser = unitOfWork.UserRepository.Get().FirstOrDefault(user => user.UserName == UserName);
-            if (currentUser != null)
+            if (string.IsNullOrEmpty(UserName) || string.IsNullOrEmpty(Password))
             {
-                if (Validation.GetHashString(Password) == currentUser.Password)
-                {
-                    CurrentUser.SetUserId(currentUser.Id);
-
-                    App.ForumPage = new ForumView();
-                    App.ProfilViewModel.CurrentPage = App.ForumPage;
-                }
-                else
-                {
-                    MessageBox.Show("Пароль введен с ошибкой, попробуйте ещё раз :)");
-                }
-                
+                MessageBox.Show("Введите необходимые данные :)");
             }
             else
             {
-                MessageBox.Show("Такого пользователя не существует или логин введен с ошибкой, попробуйте ещё раз :)");
+                var currentUser = unitOfWork.UserRepository.Get().FirstOrDefault(user => user.UserName == UserName);
+                if (currentUser != null)
+                {
+                    if (Validation.GetHashString(Password) == currentUser.Password)
+                    {
+                        CurrentUser.SetUserId(currentUser.Id);
+
+                        App.ForumPage = new ForumView();
+                        App.ProfilViewModel.CurrentPage = App.ForumPage;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Пароль введен с ошибкой, попробуйте ещё раз :)");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Такого пользователя не существует или логин введен с ошибкой, попробуйте ещё раз :)");
+                }
             }
         }
 

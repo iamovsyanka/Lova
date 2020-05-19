@@ -5,7 +5,6 @@ using Models.UnitOfWork;
 using Models.Validation;
 using Presentation.Views;
 using System;
-using System.ComponentModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
@@ -32,11 +31,7 @@ namespace Presentation.ViewModels
             get => userName;
             set
             {
-                if (userName != null)
-                {
-                    userName = value;
-                }
-
+                userName = value;
                 OnPropertyChanged("UserName");
             }
         }
@@ -88,38 +83,46 @@ namespace Presentation.ViewModels
 
         private async void SignUp()
         {
-            if (unitOfWork.UserRepository.Get().FirstOrDefault(user => user.UserName == UserName) != null)
+            if (string.IsNullOrEmpty(UserName) || string.IsNullOrEmpty(Password))
             {
-                MessageBox.Show("Упс... Пользователь с таким именем уже существует :)");
-                return;
+                MessageBox.Show("Введите необходимые данные :)");
             }
-
-            if (CheckField())
+            else
             {
-                var newUser = new User()
+                if (unitOfWork.UserRepository.Get().FirstOrDefault(user => user.UserName == UserName) != null)
                 {
-                    UserName = userName,
-                    Password = Validation.GetHashString(password),
-                    Role = Models.Enums.Role.User
-                };
-                await unitOfWork.UserRepository.AddAsync(newUser);
+                    MessageBox.Show("Упс... Пользователь с таким именем уже существует :)");
+                    return;
+                }
 
-                MessageBox.Show("Регистрация прошла успешно! :)\nДля дальнейшей работы авторизируйтесь");
 
-                App.LoginPage = new LoginView();
-                App.ProfilViewModel.CurrentPage = App.LoginPage;
+                if (CheckField())
+                {
+                    var newUser = new User()
+                    {
+                        UserName = userName,
+                        Password = Validation.GetHashString(password),
+                        Role = Models.Enums.Role.User
+                    };
+                    await unitOfWork.UserRepository.AddAsync(newUser);
+
+                    MessageBox.Show("Регистрация прошла успешно! :)\nДля дальнейшей работы авторизируйтесь");
+
+                    App.LoginPage = new LoginView();
+                    App.ProfilViewModel.CurrentPage = App.LoginPage;
+                }
             }
         }
 
         private bool CheckField()
         {  
-            if(userName.Length < 4)
+            if(UserName.Length < 4)
             {
                 MessageBox.Show("Логин должен содержать более 4 символов :)");
                 return false;
             }
 
-            else if (!Validation.regexLogin.IsMatch(userName))
+            else if (!Validation.regexLogin.IsMatch(UserName))
             {
                 MessageBox.Show("Логин может содержать только цифры и буквы :)");
                 return false;

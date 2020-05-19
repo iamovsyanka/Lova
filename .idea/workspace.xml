@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d43e51cf-d13f-439e-85fd-b5c61ee40121" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.vs/Lova/DesignTimeBuild/.dtbcache" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Lova/DesignTimeBuild/.dtbcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Lova/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Lova/v16/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Lova/v16/Server/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Lova/v16/Server/sqlite3/storage.ide" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/netcoreapp3.1/Calculator.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator/obj/Debug/netcoreapp3.1/Calculator.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator/obj/Debug/netcoreapp3.1/Calculator.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator/obj/Debug/netcoreapp3.1/Calculator.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lova/Calculator/LevensteinViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lova/Calculator/LevensteinViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lova/Forum/ForumViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lova/Forum/ForumViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lova/ViewModels/LoginViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lova/ViewModels/LoginViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lova/ViewModels/RegistrationViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lova/ViewModels/RegistrationViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lova/Views/RegistrationView.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Lova/Views/RegistrationView.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lova/bin/Debug/netcoreapp3.1/Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Lova/bin/Debug/netcoreapp3.1/Models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lova/bin/Debug/netcoreapp3.1/Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Lova/bin/Debug/netcoreapp3.1/Models.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lova/bin/Debug/netcoreapp3.1/Presentation.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Lova/bin/Debug/netcoreapp3.1/Presentation.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lova/bin/Debug/netcoreapp3.1/Presentation.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Lova/bin/Debug/netcoreapp3.1/Presentation.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lova/obj/Debug/netcoreapp3.1/Presentation.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Lova/obj/Debug/netcoreapp3.1/Presentation.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lova/obj/Debug/netcoreapp3.1/Presentation.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Lova/obj/Debug/netcoreapp3.1/Presentation.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lova/obj/Debug/netcoreapp3.1/Presentation.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/Lova/obj/Debug/netcoreapp3.1/Presentation.g.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lova/obj/Debug/netcoreapp3.1/Presentation.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Lova/obj/Debug/netcoreapp3.1/Presentation.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lova/obj/Debug/netcoreapp3.1/Presentation_MarkupCompile.i.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Lova/obj/Debug/netcoreapp3.1/Presentation_MarkupCompile.i.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lova/obj/Debug/netcoreapp3.1/Views/RegistrationView.baml" beforeDir="false" afterPath="$PROJECT_DIR$/Lova/obj/Debug/netcoreapp3.1/Views/RegistrationView.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lova/obj/Debug/netcoreapp3.1/Views/RegistrationView.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lova/obj/Debug/netcoreapp3.1/Views/RegistrationView.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lova/obj/Debug/netcoreapp3.1/Views/RegistrationView.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lova/obj/Debug/netcoreapp3.1/Views/RegistrationView.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/bin/Debug/netcoreapp3.1/Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Models/bin/Debug/netcoreapp3.1/Models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/bin/Debug/netcoreapp3.1/Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Models/bin/Debug/netcoreapp3.1/Models.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp3.1/Models.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp3.1/Models.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp3.1/Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp3.1/Models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp3.1/Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Models/obj/Debug/netcoreapp3.1/Models.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/XUnitTestProject/obj/Debug/netcoreapp3.1/XUnitTestProject.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/XUnitTestProject/obj/Debug/netcoreapp3.1/XUnitTestProject.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/~$яснительная записка.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Пояснительная записка.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Пояснительная записка.docx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1c8z6xXgv0rEVM9eNirHrdy6eM3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d43e51cf-d13f-439e-85fd-b5c61ee40121" name="Default Changelist" comment="" />
+      <created>1589924836542</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589924836542</updated>
+      <workItem from="1589924837839" duration="9000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+</project>

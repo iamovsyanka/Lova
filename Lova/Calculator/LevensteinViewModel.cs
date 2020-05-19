@@ -7,14 +7,20 @@ namespace Presentation.ViewModels
 {
     public class LevensteinViewModel : ViewModelBase
     {
-        private string firstString = "";
-        private string secondString = "";
+        private string firstString;
+        private string secondString;
         private string result;
 
         public ICommand LevensteinCommand => new RelayCommand(obj => GetLevenstein());
         public ICommand GoToCalculatorCommand => new RelayCommand(obj => GoToCalculator());
         public ICommand GoToForumCommand => new RelayCommand(obj => GoToForum());
         public ICommand GoToTestCommand => new RelayCommand(obj => GoToTest());
+
+        public LevensteinViewModel()
+        {
+            firstString = "";
+            secondString = "";
+        }
 
         public string FirstString
         {
@@ -49,7 +55,7 @@ namespace Presentation.ViewModels
         private void GetLevenstein()
         {
             var distance = Levenstein.LevensteinDynamic(firstString, secondString);
-            Result = $"Дистанция Левенштейна между {firstString} и {secondString} составляет {distance}";
+            Result = $"Дистанция Левенштейна между \"{firstString}\" и \"{secondString}\" составляет {distance}";
         }
 
         private void GoToCalculator()

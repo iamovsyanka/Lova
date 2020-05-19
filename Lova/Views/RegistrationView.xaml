@@ -42,7 +42,7 @@
                 <ToolTip Placement="Left" Content="Пароль должен содержать не менее 6 символов"/>
             </Image.ToolTip>
         </Image>
-        <TextBox Grid.Row="1" Grid.Column="1" materialDesign:HintAssist.Hint="Логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Height="45" TextWrapping="Wrap" FontSize="18" FontWeight="Bold" CaretBrush="#FF2CB4A2">
+        <TextBox Grid.Column="1" Grid.Row="1" materialDesign:HintAssist.Hint="Логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Height="45" TextWrapping="Wrap" FontSize="18" FontWeight="Bold" CaretBrush="#FF2CB4A2">
             <TextBox.Text>
                 <Binding Path="UserName" UpdateSourceTrigger="PropertyChanged" ValidatesOnDataErrors="True">
                     <Binding.ValidationRules >

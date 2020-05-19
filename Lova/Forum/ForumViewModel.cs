@@ -115,7 +115,7 @@ namespace Presentation.ViewModels
         {
             if(selectedDiscussion != null)
             {
-                if (messageText != null) 
+                if (MessageText != null) 
                 {
                     var message = new Message()
                     {

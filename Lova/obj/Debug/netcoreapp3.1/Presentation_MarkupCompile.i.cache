@@ -16,5 +16,5 @@ D:\Курсач\Lova\Lova\App.xaml
 2141885835397
 Calculator\CalculatorView.xaml;Calculator\LevensteinView.xaml;Forum\AddDiscussionView.xaml;Forum\ForumView.xaml;Forum\RemoveDiscussionView.xaml;Forum\RemoveMessageView.xaml;Tests\AddQuestionsView.xaml;Tests\AddTestView.xaml;Tests\CurrentTestView.xaml;Tests\RemoveTestView.xaml;Tests\TestsView.xaml;Tests\UsersTestView.xaml;Tests\UserTestView.xaml;Views\LoginView.xaml;Views\ProfilView.xaml;Views\RegistrationView.xaml;Views\Resource\Style\Calculator.xaml;Views\Resource\Style\Forum.xaml;Views\Resource\Style\StartWindow.xaml;Views\Resource\Style\Test.xaml;
 
-False
+True
 
