@@ -3,7 +3,7 @@ using Models.Models;
 
 namespace Models.Contexts
 {
-    public class LovaContext:DbContext
+    public class LovaContext : DbContext
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Test> Tests { get; set; }

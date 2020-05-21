@@ -6,6 +6,7 @@ using Models.UnitOfWork;
 using System;
 using System.Collections.ObjectModel;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 
@@ -20,10 +21,9 @@ namespace Presentation.ViewModels
 
         public ICommand GoToForumCommand => new RelayCommand(obj => GoToForum());
         public ICommand GoToTestCommand => new RelayCommand(obj => GoToTest());
-        public ICommand GoToUserTestCommand => new RelayCommand(obj => GoToUserTest());
+        public ICommand GoToUserTestCommand => new RelayCommand(async obj => await GoToUserTest());
         public ICommand SearchTestCommand => new RelayCommand(obj => SearchTest());
-        public ICommand AddTestCommand => new RelayCommand(obj => AddTest());
-
+        public ICommand AddTestCommand => new RelayCommand(async obj => await AddTest());
 
         public TestsViewModel()
         {
@@ -107,9 +107,9 @@ namespace Presentation.ViewModels
             }
         }
 
-        private void GoToUserTest()
+        private async Task GoToUserTest()
         {
-            if (unitOfWork.UserRepository.IsAdmin(CurrentUser.GetUserId()))
+            if (await unitOfWork.UserRepository.IsAdmin(CurrentUser.GetUserId()))
             {
                 App.UsersTestPage= new Views.UsersTestView();
                 App.ProfilViewModel.CurrentPage = App.UsersTestPage;
@@ -123,7 +123,7 @@ namespace Presentation.ViewModels
 
         private void SearchTest()
         {
-            if (testName != null) 
+            if (!string.IsNullOrEmpty(testName)) 
             {
                 var regex = new Regex(testName);
                 var check = false;
@@ -150,9 +150,9 @@ namespace Presentation.ViewModels
             }
         }
 
-        private void AddTest()
+        private async Task AddTest()
         {
-            if (unitOfWork.UserRepository.IsAdmin(CurrentUser.GetUserId()))
+            if (await unitOfWork.UserRepository.IsAdmin(CurrentUser.GetUserId()))
             {
                 App.AddTestPage = new Views.AddTestView();
                 App.ProfilViewModel.CurrentPage = App.AddTestPage;

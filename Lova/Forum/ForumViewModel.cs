@@ -5,6 +5,7 @@ using Models.Models;
 using Models.UnitOfWork;
 using System;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 
@@ -22,7 +23,7 @@ namespace Presentation.ViewModels
         public ICommand GoToTestCommand => new RelayCommand(obj => GoToTest());
         public ICommand GoToCalculatorCommand => new RelayCommand(obj => GoToCalculator());
 
-        public ICommand AddDiscussionCommand => new RelayCommand(obj => AddDiscussion());
+        public ICommand AddDiscussionCommand => new RelayCommand(async obj => await AddDiscussion());
 
         public ForumViewModel()
         {
@@ -115,7 +116,7 @@ namespace Presentation.ViewModels
         {
             if(selectedDiscussion != null)
             {
-                if (MessageText != null) 
+                if (!string.IsNullOrEmpty(MessageText)) 
                 {
                     var message = new Message()
                     {
@@ -142,9 +143,9 @@ namespace Presentation.ViewModels
 
         }  
 
-        private void AddDiscussion()
+        private async Task AddDiscussion()
         {
-            if(unitOfWork.UserRepository.IsAdmin(CurrentUser.GetUserId()))
+            if(await unitOfWork.UserRepository.IsAdmin(CurrentUser.GetUserId()))
             {
                 App.AddDiscussionPage= new Views.AddDiscussionView();
                 App.ProfilViewModel.CurrentPage = App.AddDiscussionPage;

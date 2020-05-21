@@ -4,8 +4,8 @@ using Models.Current;
 using Models.Models;
 using Models.UnitOfWork;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 
@@ -67,7 +67,7 @@ namespace Presentation.ViewModels
         {
             if(selectedQuestion != null)
             {
-                if(answer != null)
+                if(!string.IsNullOrEmpty(answer))
                 {
                     if (selectedQuestion.Answer == answer)
                     {

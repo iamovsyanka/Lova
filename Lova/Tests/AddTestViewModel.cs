@@ -56,7 +56,11 @@ namespace Presentation.ViewModels
 
         private async void AddTest()
         {
-            if(testName != null && testDescription != null && testCategory != null)
+            if (string.IsNullOrEmpty(testName) || string.IsNullOrEmpty(testDescription) || string.IsNullOrEmpty(testCategory))
+            {
+                MessageBox.Show("Упс... Не все поля введены :(");
+            }
+            else
             {
                 var newTest = new Test()
                 {
@@ -71,10 +75,6 @@ namespace Presentation.ViewModels
 
                 App.AddQuestionsPage = new Views.AddQuestionsView();
                 App.ProfilViewModel.CurrentPage = App.AddQuestionsPage;
-            }
-            else
-            {
-                MessageBox.Show("Упс... Не все поля введены :(");
             }
         }
 

@@ -16,7 +16,6 @@ namespace Presentation.ViewModels
         public ICommand AddDiscussionCommand => new RelayCommand(obj => AddDiscussion());
         public ICommand RemoveDiscussionCommand => new RelayCommand(obj => GoToRemoveDiscussion());
         public ICommand RemoveMessageCommand => new RelayCommand(obj => GoToRemoveMessage());
-
         public ICommand GoToForumCommand => new RelayCommand(obj => GoToForum());
         public ICommand GoToTestCommand => new RelayCommand(obj => GoToTest());
 
@@ -47,7 +46,11 @@ namespace Presentation.ViewModels
 
         private async void AddDiscussion()
         {
-            if (discussionName != null && discussionText != null)
+            if (string.IsNullOrEmpty(discussionName) || string.IsNullOrEmpty(discussionText))
+            {
+                MessageBox.Show("Упс... Не все поля введены :(");
+            }
+            else
             {
                 var newDiscussion = new Discussion()
                 {
@@ -58,12 +61,8 @@ namespace Presentation.ViewModels
                 await unitOfWork.DiscussionRepository.AddAsync(newDiscussion);
                 MessageBox.Show("Обсуждение добавлено :)");
 
-                DiscussionName = null; 
+                DiscussionName = null;
                 DiscussionText = null;
-            }
-            else
-            {
-                MessageBox.Show("Упс... Не все поля введены :(");
             }
         }
 

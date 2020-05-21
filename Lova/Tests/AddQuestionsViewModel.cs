@@ -45,10 +45,14 @@ namespace Presentation.ViewModels
 
         private async void AddQuestion()
         {
-            if(questionDescription != null && answer != null)
+            if (string.IsNullOrEmpty(questionDescription) || string.IsNullOrEmpty(answer))
+            {
+                MessageBox.Show("Упс... Не все поля введены :(");
+            }
+            else
             {
                 var newQuestion = new Question()
-                { 
+                {
                     TestId = CurrentTest.GetTestId(),
                     Description = questionDescription,
                     Answer = answer
@@ -60,10 +64,6 @@ namespace Presentation.ViewModels
 
                 QuestionDescription = null;
                 Answer = null;
-            }
-            else
-            {
-                MessageBox.Show("Упс... Не все поля введены :(");
             }
         }
 

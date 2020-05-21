@@ -52,7 +52,11 @@ namespace Models.Repositories
             }
         }
 
-        public bool IsAdmin(int userId) => Get().FirstOrDefault(u => u.Id == userId).Role == Enums.Role.Admin;
+        public async Task<bool> IsAdmin(int userId)
+        {
+            var user = await Get().FirstOrDefaultAsync(u => u.Id == userId);
+            return user.Role == Enums.Role.Admin;
+        }
 
         public string GetUserNameById(int userId)
         {
