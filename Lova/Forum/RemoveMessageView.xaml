@@ -34,8 +34,8 @@
                     <StackPanel>
                         <Border BorderBrush="#8570E0" BorderThickness="1" Width="505">
                             <StackPanel>
-                                <TextBlock Text="{Binding UserName}" FontSize="14" TextWrapping="Wrap"/>
-                                <TextBlock Text="{Binding Text}" FontWeight="Bold" FontSize="16"/>
+                                <TextBlock Text="{Binding UserName}" FontSize="14"/>
+                                <TextBlock Text="{Binding Text}" FontWeight="Bold" FontSize="16" TextWrapping="Wrap"/>
                                 <TextBlock Text="{Binding When}" FontSize="14" TextWrapping="Wrap"/>
                             </StackPanel>
                         </Border>

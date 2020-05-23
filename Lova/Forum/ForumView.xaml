@@ -46,7 +46,7 @@
                                         <ListView ItemsSource="{Binding Messages}" Width="500" Height="153" >
                                             <ListView.ItemTemplate>
                                                 <DataTemplate>
-                                                    <StackPanel Margin="0" Background="#7FDACD" Width="463">
+                                                    <StackPanel Background="#7FDACD" Width="463">
                                                         <Border>
                                                             <StackPanel>
                                                                 <StackPanel Orientation="Horizontal">
@@ -56,7 +56,7 @@
                                                                     <TextBlock Text="):"/>
                                                                 </StackPanel>
                                                                 <StackPanel>
-                                                                    <TextBlock Text="{Binding Text}" FontSize="15"/>
+                                                                    <TextBlock Text="{Binding Text}" FontSize="15" TextWrapping="WrapWithOverflow"/>
                                                                 </StackPanel>
                                                             </StackPanel>
                                                         </Border>

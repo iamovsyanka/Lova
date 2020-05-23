@@ -19,7 +19,6 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="38*"/>
             <RowDefinition Height="245*"/>
-            <RowDefinition Height="15*"/>
             <RowDefinition Height="149*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -41,9 +40,6 @@
                 </TreeViewItem>
             </TreeViewItem>
         </TreeView>
-        <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" >
-
-        </StackPanel>
 
         <ListView Grid.Row="1" Grid.Column="0" ItemsSource="{Binding Questions}" SelectedItem="{Binding SelectedQuestion}">
             <ListView.ItemTemplate>

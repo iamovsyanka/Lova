@@ -30,9 +30,9 @@
         
         <Label Grid.Row="0" Content="Вопрос" VerticalAlignment="Stretch" Grid.Column="1"/>
         <TextBlock Grid.Row="1" Text="Описание:" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding QuestionDescription}" Width="323" Height="90" VerticalAlignment="Bottom"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding QuestionDescription}" Width="323" Height="90" VerticalAlignment="Bottom" TextWrapping="WrapWithOverflow"/>
         <TextBlock Grid.Row="2" Text="Ответ:" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Answer}" Height="50" Width="323" VerticalAlignment="Bottom"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Answer}" Height="50" Width="323" VerticalAlignment="Bottom" TextWrapping="WrapWithOverflow"/>
         <Button Grid.Row="3" Grid.ColumnSpan="2" Content="Добавить вопрос" Width="254" Height="51" Command="{Binding AddQuestionCommand}"/>
         <Button Grid.Column="2" Grid.Row="3" Content="Завершить" Command="{Binding GoToTestCommand}" Height="40" Width="170"/>
         <Image Grid.Column="2" Grid.Row="1" Grid.RowSpan="2" Source="..\Views\Resource\Image\Add.png" Margin="23,0,13,36"/>

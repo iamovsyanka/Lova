@@ -92,7 +92,6 @@ namespace Models.UnitOfWork
             }
         }
 
-
         public void Save() => lovaContext.SaveChanges();
 
         public void Dispose() => lovaContext.Dispose();
