@@ -3,6 +3,7 @@ using Models.Commands;
 using Models.Current;
 using Models.Models;
 using Models.UnitOfWork;
+using Models.Validation;
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
@@ -56,11 +57,7 @@ namespace Presentation.ViewModels
 
         private async void AddTest()
         {
-            if (string.IsNullOrEmpty(testName) || string.IsNullOrEmpty(testDescription) || string.IsNullOrEmpty(testCategory))
-            {
-                MessageBox.Show("Упс... Не все поля введены :(");
-            }
-            else
+            if (!string.IsNullOrEmpty(testName) && !string.IsNullOrEmpty(testDescription) && !string.IsNullOrEmpty(testCategory) && Validation.regexText.IsMatch(testName) && Validation.regexText.IsMatch(testDescription) && Validation.regexText.IsMatch(testCategory))
             {
                 var newTest = new Test()
                 {
@@ -75,6 +72,10 @@ namespace Presentation.ViewModels
 
                 App.AddQuestionsPage = new Views.AddQuestionsView();
                 App.ProfilViewModel.CurrentPage = App.AddQuestionsPage;
+            }
+            else
+            {
+                MessageBox.Show("Упс... Не все поля введены или начинаеются с пробела :(\nАккуратнее");
             }
         }
 

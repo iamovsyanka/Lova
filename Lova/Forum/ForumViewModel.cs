@@ -3,6 +3,7 @@ using Models.Commands;
 using Models.Current;
 using Models.Models;
 using Models.UnitOfWork;
+using Models.Validation;
 using System;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
@@ -22,7 +23,6 @@ namespace Presentation.ViewModels
         public ICommand SendMessageCommand => new RelayCommand(obj => SendMessage());
         public ICommand GoToTestCommand => new RelayCommand(obj => GoToTest());
         public ICommand GoToCalculatorCommand => new RelayCommand(obj => GoToCalculator());
-
         public ICommand AddDiscussionCommand => new RelayCommand(async obj => await AddDiscussion());
 
         public ForumViewModel()
@@ -32,16 +32,6 @@ namespace Presentation.ViewModels
             discussions = new ObservableCollection<Discussion>(unitOfWork.DiscussionRepository.Get());
             messages = new ObservableCollection<Message>(unitOfWork.MessageRepository.Get());
         }
-
-        //private Task Refresh()
-        //{
-        //    while (true)
-        //    {
-        //        App.ForumPage = new Views.Forum();
-        //        App.ProfilViewModel.CurrentPage = App.ForumPage;
-        //        Thread.Sleep(5000);
-        //    }
-        //}
 
         public ObservableCollection<Discussion> Discussions 
         {
@@ -116,7 +106,7 @@ namespace Presentation.ViewModels
         {
             if(selectedDiscussion != null)
             {
-                if (!string.IsNullOrEmpty(MessageText)) 
+                if (!string.IsNullOrEmpty(MessageText) && Validation.regexText.IsMatch(messageText)) 
                 {
                     var message = new Message()
                     {
@@ -133,7 +123,7 @@ namespace Presentation.ViewModels
                 }
                 else
                 {
-                    MessageBox.Show("Упс... А вы не ввели сообщение :)");
+                    MessageBox.Show("Упс... А вы не ввели сообщение или поставили пробел в начале :)\nАккуратнее");
                 }
             }
             else 

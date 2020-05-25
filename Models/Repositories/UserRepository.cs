@@ -63,6 +63,5 @@ namespace Models.Repositories
             var user = Get().FirstOrDefault(u => u.Id == userId);
             return user != null ? user.UserName : "";
         }
-
     }
 }

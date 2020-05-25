@@ -3,6 +3,7 @@ using Models.Commands;
 using Models.Current;
 using Models.Models;
 using Models.UnitOfWork;
+using Models.Validation;
 using System;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
@@ -67,7 +68,7 @@ namespace Presentation.ViewModels
         {
             if(selectedQuestion != null)
             {
-                if(!string.IsNullOrEmpty(answer))
+                if(!string.IsNullOrEmpty(answer) && Validation.regexText.IsMatch(answer))
                 {
                     if (selectedQuestion.Answer == answer)
                     {
@@ -82,7 +83,7 @@ namespace Presentation.ViewModels
                 }
                 else
                 {
-                    MessageBox.Show("Упс... Ответа нет, а он должен быть :)");
+                    MessageBox.Show("Упс... Ответа нет, а он должен быть, или он начинается с пробела :)");
                 }
             }
             else
@@ -94,24 +95,32 @@ namespace Presentation.ViewModels
 
         private async void CheckTest()
         {
-            if(wrongAnswers != null)
+            var result = MessageBox.Show(
+                    "Вы действительно хотите закончить тест?",
+                    "Подтверждение",
+                    MessageBoxButton.YesNo);
+            if (result == MessageBoxResult.Yes)
             {
-                MessageBox.Show($"Неправильные ответы: {wrongAnswers}");
+                if (wrongAnswers != null)
+                {
+                    MessageBox.Show($"Неправильные ответы: {wrongAnswers}");
+                }
+                var newUserTest = new UserTest()
+                {
+                    TestName = unitOfWork.TestRepository.GetTestNameById(CurrentTest.GetTestId()),
+                    UserId = CurrentUser.GetUserId(),
+                    UserName = unitOfWork.UserRepository.GetUserNameById(CurrentUser.GetUserId()),
+                    TestId = CurrentTest.GetTestId(),
+                    Result = $"{countCorrectAnswers} / {questions.Count}",
+                    SolvedTime = DateTime.Now
+                };
+
+                await unitOfWork.UserTestRepository.AddAsync(newUserTest);
+
+                App.UserTestPage= new Views.UserTestView();
+                App.ProfilViewModel.CurrentPage = App.UserTestPage; 
             }
-            var newUserTest = new UserTest()
-            {
-                TestName = unitOfWork.TestRepository.GetTestNameById(CurrentTest.GetTestId()),
-                UserId = CurrentUser.GetUserId(),
-                UserName = unitOfWork.UserRepository.GetUserNameById(CurrentUser.GetUserId()),
-                TestId = CurrentTest.GetTestId(),
-                Result = $"{countCorrectAnswers} / {questions.Count}",
-                SolvedTime = DateTime.Now
-            };
-
-            await unitOfWork.UserTestRepository.AddAsync(newUserTest);
-
-            App.UserTestPage= new Views.UserTestView();
-            App.ProfilViewModel.CurrentPage = App.UserTestPage;           
+          
         }
 
         private void GoToForum()

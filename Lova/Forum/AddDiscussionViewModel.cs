@@ -2,6 +2,7 @@
 using Models.Commands;
 using Models.Models;
 using Models.UnitOfWork;
+using Models.Validation;
 using System.Windows;
 using System.Windows.Input;
 
@@ -46,11 +47,7 @@ namespace Presentation.ViewModels
 
         private async void AddDiscussion()
         {
-            if (string.IsNullOrEmpty(discussionName) || string.IsNullOrEmpty(discussionText))
-            {
-                MessageBox.Show("Упс... Не все поля введены :(");
-            }
-            else
+            if (!string.IsNullOrEmpty(discussionName) && !string.IsNullOrEmpty(discussionText) && Validation.regexText.IsMatch(discussionName) && Validation.regexText.IsMatch(discussionText))
             {
                 var newDiscussion = new Discussion()
                 {
@@ -63,6 +60,10 @@ namespace Presentation.ViewModels
 
                 DiscussionName = null;
                 DiscussionText = null;
+            }
+            else
+            {
+                MessageBox.Show("Упс... Не все поля введены или начинаеются с пробела :(\nАккуратнее");
             }
         }
 

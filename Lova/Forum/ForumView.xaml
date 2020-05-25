@@ -30,14 +30,13 @@
             <RowDefinition Height="44*"/>
             <RowDefinition Height="35*"/>
         </Grid.RowDefinitions>
-
-        <Label Content="Форум" Height="34" Width="68"/>
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="Форум"/>
         <Grid Grid.Row="1" Grid.RowSpan="7" Grid.Column="0">
             <ListView ItemsSource="{Binding Discussions}" SelectedItem="{Binding SelectedDiscussion}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>
-                            <Border BorderBrush="#8570E0" BorderThickness="1" Width="600">
+                            <Border BorderBrush="#8570E0" BorderThickness="1" Width="575">
                                 <StackPanel>
                                     <TextBlock Text="{Binding DiscussionName}" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" />
                                     <TextBlock Text="{Binding Text}" FontSize="14" TextWrapping="Wrap"/>
@@ -72,7 +71,9 @@
                 </ListView.ItemTemplate>
             </ListView>
         </Grid>
-        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding MessageText}" Margin="18,0,18,10" />
+        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding MessageText}" Margin="18,0,18,10" >
+            <TextBox.ToolTip>Текст не должен начинаться с пробела</TextBox.ToolTip>
+        </TextBox>
         <Button Grid.Column="1" Grid.Row="2" Command="{Binding SendMessageCommand}" Content="Отправить сообщение" Height="40" Width="170"/>
         <Image Grid.Row="3" Grid.Column="1" Source="..\Views\Resource\Image\NewPage.png">
             <Image.ToolTip >

@@ -9,6 +9,7 @@ namespace Models.Validation
     {
         public static Regex regexLogin = new Regex(@"^[A-zА-я\d]+$");
         public static Regex regexPassword = new Regex(@"^[A-z\d]+$");
+        public static Regex regexText = new Regex(@"\A\S");
 
         public static Guid GetHashString(string s)
         {

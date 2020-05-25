@@ -31,11 +31,17 @@
         
         <Label Grid.Row="0" Content="Тест" Grid.Column="1"/>
         <TextBlock Grid.Row="1" Text="Название:" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding TestName}" Width="321" Height="40" TextWrapping="WrapWithOverflow"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding TestName}" Width="321" Height="40" TextWrapping="WrapWithOverflow">
+            <TextBox.ToolTip>Текст не должен начинаться с пробела</TextBox.ToolTip>
+        </TextBox>
         <TextBlock Grid.Row="2" Text="Описание:" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding TestDescription}" Width="322" Height="68" TextWrapping="WrapWithOverflow"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding TestDescription}" Width="322" Height="68" TextWrapping="WrapWithOverflow">
+            <TextBox.ToolTip>Текст не должен начинаться с пробела</TextBox.ToolTip>
+        </TextBox>
         <TextBlock Grid.Row="3" Text="Категория:" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding TestCategory}" Width="321" Height="43" />
+        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding TestCategory}" Width="321" Height="43">
+            <TextBox.ToolTip>Текст не должен начинаться с пробела</TextBox.ToolTip>
+        </TextBox>
         <Button Grid.Row="4" Grid.Column="1" Content="Добавить тест" Width="254" Height="52" Command="{Binding AddTestCommand}"/>
         <Image Grid.Column="2" Grid.Row="1" Grid.RowSpan="2" Source="..\Views\Resource\Image\Add.png"/>
         <Button Grid.Column="2" Grid.Row="4" Content="Удалить тест" Command="{Binding RemoveTestCommand}"/>
